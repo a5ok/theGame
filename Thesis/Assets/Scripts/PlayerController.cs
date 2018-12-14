@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         myCollider = GetComponent<Collider2D>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -21,11 +22,10 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () { 
+	void Update () {
 
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
         myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
-
 
         // Il player salta quando viene toccato lo schermo
         if (grounded && Input.GetKeyDown(KeyCode.Space))
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
 
-
-
     }
+
+   
 }

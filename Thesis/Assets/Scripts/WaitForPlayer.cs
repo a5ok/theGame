@@ -6,6 +6,7 @@ public class WaitForPlayer : MonoBehaviour {
 
     [SerializeField] public GameObject player;
     [SerializeField] public GameObject start;
+    [SerializeField] public GameObject text;
     private bool waitingToStartGame = true;
 
 	// Use this for initialization
@@ -21,6 +22,7 @@ public class WaitForPlayer : MonoBehaviour {
             waitingToStartGame = false;
             player.SetActive(true);
             start.SetActive(false);
+            text.SetActive(false);
         }
         
     }
