@@ -24,13 +24,18 @@ public class JumpTutorial : MonoBehaviour {
 
         if(triggered && firstTime)
         {
-            firstTime = true;
+            text.SetActive(true);
+            firstTime = false;
             Time.timeScale = 0f;
 
         }
 
         if(triggered && !firstTime && Input.GetKeyDown(KeyCode.Space))
+        {
+            text.SetActive(false);
             Time.timeScale = 1f;
+        }
+
             
 
     }

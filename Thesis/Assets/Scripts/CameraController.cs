@@ -1,28 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
 
-    PlayerController player;
-    private Vector3 lastPlayerPosition;
-    private float distanceToMove;
+    public GameObject player;       
+    private float offset;        
 
-    // Use this for initialization
     void Start()
     {
-
-        player = FindObjectOfType<PlayerController>();
-        lastPlayerPosition = player.transform.position;
+        offset = transform.position.x - player.transform.position.x;
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-
-        distanceToMove = player.transform.position.x - lastPlayerPosition.x;
-        transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
-        lastPlayerPosition = player.transform.position;
+        transform.position = new Vector3(player.transform.position.x + offset, transform.position.y, transform.position.z);
     }
 }
