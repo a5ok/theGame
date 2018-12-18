@@ -20,7 +20,7 @@ public class QTESystem : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        keyToPress = Random.Range(1, 3);
+        keyToPress = Random.Range(1, 4);
         firstTime = true;
         myCollider = GetComponent<Collider2D>();
     }
@@ -32,25 +32,28 @@ public class QTESystem : MonoBehaviour {
 
         if (triggered && firstTime)
         {
-            firstTime = false;
             Time.timeScale = 0f;
             countingDown = 1;
             StartCoroutine(CountDown());
-            QTEText.GetComponent<Text>().text = "Premi rapidamente il tasto mostrato ";
-
+            QTEText.SetActive(true);
             if (keyToPress == 1)
             {
                 qKey.SetActive(true);
+
                 if (Input.anyKeyDown)
                 {
+                   QTEText.SetActive(false);
+                     
                     if (Input.GetKeyDown(KeyCode.Q))
                     {
                         correctKey = 1;
+                        firstTime = false;
                         StartCoroutine(KeyPressing());
                     }
                     else
                     {
                         correctKey = 2;
+                        firstTime = false;
                         StartCoroutine(KeyPressing());
                     }
                 }
@@ -59,16 +62,21 @@ public class QTESystem : MonoBehaviour {
             if (keyToPress == 2)
             {
                 wKey.SetActive(true);
+
                 if (Input.anyKeyDown)
                 {
+                    QTEText.SetActive(false);
+
                     if (Input.GetKeyDown(KeyCode.W))
                     {
-                        correctKey = 1;
+                        correctKey = 1; 
+                        firstTime = false;
                         StartCoroutine(KeyPressing());
                     }
                     else
                     {
                         correctKey = 2;
+                        firstTime = false;
                         StartCoroutine(KeyPressing());
                     }
                 }
@@ -77,16 +85,21 @@ public class QTESystem : MonoBehaviour {
             if (keyToPress == 3)
             {
                 eKey.SetActive(true);
+               
                 if (Input.anyKeyDown)
                 {
+                    QTEText.SetActive(false);
+
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         correctKey = 1;
+                        firstTime = false;
                         StartCoroutine(KeyPressing());
                     }
                     else
                     {
                         correctKey = 2;
+                        firstTime = false;
                         StartCoroutine(KeyPressing());
                     }
                 }
@@ -104,22 +117,31 @@ public class QTESystem : MonoBehaviour {
 
         if (correctKey == 1)
         {
+            qKey.GetComponent<SpriteRenderer>().color = Color.green;
+            wKey.GetComponent<SpriteRenderer>().color = Color.green;
+            eKey.GetComponent<SpriteRenderer>().color = Color.green;
             countingDown = 2;
-            QTEText.GetComponent<Text>().text = "BRAVO!!";
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSecondsRealtime(0.5f);
+            qKey.SetActive(false);
+            wKey.SetActive(false);
+            eKey.SetActive(false);
             correctKey = 0;
-            QTEText.GetComponent<Text>().text = "";
-
-
+            Time.timeScale = 1f;
         }
+
 
         if (correctKey == 2)
         {
+            qKey.GetComponent<SpriteRenderer>().color = Color.red;
+            wKey.GetComponent<SpriteRenderer>().color = Color.red;
+            eKey.GetComponent<SpriteRenderer>().color = Color.red;
             countingDown = 2;
-            QTEText.GetComponent<Text>().text = "NOOOOOOOOO";
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSecondsRealtime(0.5f);
+            qKey.SetActive(false);
+            wKey.SetActive(false);
+            eKey.SetActive(false);
             correctKey = 0;
-            QTEText.GetComponent<Text>().text = "";
+            Time.timeScale = 1f;
 
         }
     }
@@ -127,17 +149,25 @@ public class QTESystem : MonoBehaviour {
 
     IEnumerator CountDown()
     {
-        yield return new WaitForSeconds(5f);
-
+        yield return new WaitForSecondsRealtime(5);
         if(countingDown == 1)
         {
+            firstTime = false;
+            QTEText.SetActive(false);
+            qKey.GetComponent<SpriteRenderer>().color = Color.red;
+            wKey.GetComponent<SpriteRenderer>().color = Color.red;
+            eKey.GetComponent<SpriteRenderer>().color = Color.red;
             keyToPress = 4;
             countingDown = 2;
             countingDown = 2;
-            QTEText.GetComponent<Text>().text = "NOOOOOOOOO";
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSecondsRealtime(0.5f);
+            qKey.SetActive(false);
+            wKey.SetActive(false);
+            eKey.SetActive(false);
+            Time.timeScale = 1f;
+
             correctKey = 0;
-            QTEText.GetComponent<Text>().text = "";
+
         }
     }
 }
