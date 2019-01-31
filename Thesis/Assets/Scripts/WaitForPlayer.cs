@@ -6,7 +6,8 @@ public class WaitForPlayer : MonoBehaviour {
 
     [SerializeField] public GameObject player;
     [SerializeField] public GameObject start;
-    [SerializeField] public GameObject text;
+    [SerializeField] public GameObject textSx;
+    [SerializeField] public GameObject textDx;
     private bool waitingToStartGame = true;
 
 	// Use this for initialization
@@ -17,12 +18,13 @@ public class WaitForPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if(waitingToStartGame && Input.GetKeyDown(KeyCode.Space))
+        if(waitingToStartGame && Input.GetMouseButtonDown(0))
         {
             waitingToStartGame = false;
             player.SetActive(true);
             start.SetActive(false);
-            text.SetActive(false);
+            textSx.SetActive(false);
+            textDx.SetActive(false);
         }
         
     }

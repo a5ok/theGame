@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class JumpTutorial : MonoBehaviour {
 
-    [SerializeField] GameObject text;
+    [SerializeField] GameObject textSx;
+    [SerializeField] GameObject textDx;
     private bool triggered;
     private bool firstTime;
     public LayerMask whatIsPlayer;
@@ -24,15 +25,17 @@ public class JumpTutorial : MonoBehaviour {
 
         if(triggered && firstTime)
         {
-            text.SetActive(true);
+            textSx.SetActive(true);
+            textDx.SetActive(true);
             firstTime = false;
             Time.timeScale = 0f;
 
         }
 
-        if(triggered && !firstTime && Input.GetKeyDown(KeyCode.Space))
+        if(triggered && !firstTime && Input.GetMouseButtonDown(0))
         {
-            text.SetActive(false);
+            textSx.SetActive(false);
+            textDx.SetActive(false);
             Time.timeScale = 1f;
         }
 

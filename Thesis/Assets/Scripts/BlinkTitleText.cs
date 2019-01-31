@@ -8,6 +8,7 @@ public class BlinkTitleText : MonoBehaviour
 
     Text flashingText;
 
+
     void Start()
     {
         flashingText = GetComponent<Text>();

@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
         myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
 
         // Il player salta quando viene toccato lo schermo
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetMouseButtonDown(0))
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
 
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
