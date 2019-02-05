@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 72dc7d0b5dd68445ebd9ec64846e9f97
   - enabled: 1
-    path: Assets/Scenes/EyeSelection.unity
-    guid: 4ed38da8169ad488fb06a7d034be220d
+    path: Assets/3D4amb-LIB/Scenes/MainMenu.unity
+    guid: b7e1de01b0b535345b439b3097a0ffa7
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: e55c76f7da8fd458586f086ecee12fad
+    path: Assets/3D4amb-LIB/Scenes/PutOnVr.unity
+    guid: 16a28003fccd11343a346e0a6cd3aa6f
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 57f6c90ffc4e846caae7ab45e7fa3893
+  - enabled: 1
+    path: Assets/3D4amb-LIB/Scenes/ShowResults.unity
+    guid: 9ba7cfbb93764fb498fc52b8b0f4342e
   m_configObjects: {}
