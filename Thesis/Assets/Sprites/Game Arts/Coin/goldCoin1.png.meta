@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: afc8937bf4d2b444a96de657501648a7
+guid: 5f5f15cfd8bb742caaa0a5e1aff71dcb
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: uipack_rpg_sheet_0
-    21300002: uipack_rpg_sheet_1
-    21300004: uipack_rpg_sheet_2
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -43,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,71 +93,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: uipack_rpg_sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 414
-        width: 191
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67ba589d317704eb59030e9134c6b8f6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: uipack_rpg_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 190
-        y: 312
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a9b97d501ced42bbb7133b3302b13f5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: uipack_rpg_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 324
-        width: 190
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51a11a4606a0d4cc8b1e4182dc980c1a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5f387121a33274e279669fe57c4ec0f8
+    spriteID: dd8d2ca7654bd408ea7757a09e99a924
     vertices: []
     indices: 
     edges: []

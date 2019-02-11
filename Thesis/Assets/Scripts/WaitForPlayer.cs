@@ -18,7 +18,7 @@ public class WaitForPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if(waitingToStartGame && Input.GetMouseButtonDown(0))
+        if(waitingToStartGame && Input.GetButtonDown("Jump"))
         {
             waitingToStartGame = false;
             player.SetActive(true);

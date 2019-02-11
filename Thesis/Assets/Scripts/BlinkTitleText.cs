@@ -19,7 +19,7 @@ public class BlinkTitleText : MonoBehaviour
     {
         while (true)
         {
-            flashingText.text = "Tocca lo schermo per iniziare";
+            flashingText.text = "Premi A per iniziare";
             yield return new WaitForSeconds(.5f);
             flashingText.text = "";
             yield return new WaitForSeconds(.5f);

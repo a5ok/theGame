@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerTag
   - EnemyTag
+  - CoinTag
+  - EndLevel
   layers:
   - Default
   - TransparentFX

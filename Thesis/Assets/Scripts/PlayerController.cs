@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     private BoxCollider2D myCollider;
     public GameObject playerSword;
     private Animator myAnimator;
+   
 
 	// Use this for initialization
 	void Start () {
@@ -30,15 +32,18 @@ public class PlayerController : MonoBehaviour {
         myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
 
         // Player jumps when X button is clicked
-        if (grounded && Input.GetMouseButtonDown(0))
+        if (grounded && Input.GetButtonDown("Jump"))
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
 
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
         myAnimator.SetFloat("vSpeed", myRigidbody.velocity.y);
 
         //Player attacks when A button is clicked
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && Input.GetButtonDown("Fire1"))
             StartCoroutine(Attack());
+
+
+        
     }
 
     public IEnumerator Attack()
@@ -47,6 +52,23 @@ public class PlayerController : MonoBehaviour {
         myAnimator.SetTrigger("Attack");
         yield return new WaitForSeconds(.5f);
         playerSword.SetActive(false);
+    }
+
+    //Player pickups a coin
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("CoinTag"))
+        {
+            collision.gameObject.SetActive(false);
+            GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
+
+        }
+
+        if(collision.gameObject.CompareTag("EndLevel"))
+        {
+            GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
+            SceneManager.LoadScene(1);
+        }
     }
 
 

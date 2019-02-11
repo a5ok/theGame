@@ -32,7 +32,7 @@ public class JumpTutorial : MonoBehaviour {
 
         }
 
-        if(triggered && !firstTime && Input.GetMouseButtonDown(0))
+        if(triggered && !firstTime && Input.GetButtonDown("Jump"))
         {
             textSx.SetActive(false);
             textDx.SetActive(false);

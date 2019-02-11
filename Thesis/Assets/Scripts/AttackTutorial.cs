@@ -32,7 +32,7 @@ public class AttackTutorial : MonoBehaviour
 
         }
 
-        if (triggered && !firstTime && Input.GetKeyDown(KeyCode.Space))
+        if (triggered && !firstTime && Input.GetButton("Fire1"))
         {
             textSx.SetActive(false);
             textDx.SetActive(false);
