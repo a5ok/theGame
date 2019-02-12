@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour {
 
-	public void LoadScene(int scene)
+    public static int levelNumber;
+
+    public void SetNumber(int number)
     {
-        SceneManager.LoadScene(scene);
+        levelNumber = number;
     }
 }
