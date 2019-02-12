@@ -42,7 +42,22 @@ public class PlayerController : MonoBehaviour {
         if (grounded && Input.GetButtonDown("Fire1"))
             StartCoroutine(Attack());
 
-
+        //Player dies when loses all lives
+        if (Death.isDead)
+        {
+            myRigidbody.velocity = new Vector2(0, 0);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Death.isDead = false;
+            }
+            else if (Input.GetButtonDown("Jump"))
+            {
+                SceneManager.LoadScene("MainMenu");
+                Death.isDead = false;
+               
+            }
+        }
         
     }
 
