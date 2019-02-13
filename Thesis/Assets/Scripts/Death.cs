@@ -8,13 +8,16 @@ public class Death : MonoBehaviour
     static public bool isDead = false;
     int damage = 1;
     public GameObject deathText;
+    public Animator myAnimator;
 
     private PlayerController player;
+
 
     public GameObject[] redHeartsSx = new GameObject[3];
     public GameObject[] redHeartsDx = new GameObject[3];
     public GameObject[] greyHeartsSx = new GameObject[3];
     public GameObject[] greyHeartsDx = new GameObject[3];
+
 
     void Awake()
     {
@@ -54,6 +57,9 @@ public class Death : MonoBehaviour
             greyHeartsDx[0].SetActive(true);
 
             isDead = true;
+            myAnimator.SetTrigger("Dead");
+            print("boolean a true");
+
             deathText.SetActive(true);
         }
     }
