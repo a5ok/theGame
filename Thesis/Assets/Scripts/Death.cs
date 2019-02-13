@@ -9,15 +9,22 @@ public class Death : MonoBehaviour
     int damage = 1;
     public GameObject deathText;
 
+    private PlayerController player;
+
     public GameObject[] redHeartsSx = new GameObject[3];
     public GameObject[] redHeartsDx = new GameObject[3];
     public GameObject[] greyHeartsSx = new GameObject[3];
     public GameObject[] greyHeartsDx = new GameObject[3];
 
-    void OnCollisionEnter2D(Collision2D col)
+    void Awake()
     {
-        if (col.gameObject.tag == "EnemyTag" && PlayerHealth > 1)
-            {
+        player = GetComponentInParent<PlayerController>();
+    }
+
+        void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "EnemyTag" && PlayerHealth > 1 && !player.isAttacking) // aggiunta variabile per distinzione attacco/morte
+        {
                 PlayerHealth -= damage;
                 col.gameObject.SetActive(false);
                 print(PlayerHealth);
@@ -36,7 +43,7 @@ public class Death : MonoBehaviour
                 greyHeartsDx[1].SetActive(true);
             }
             }
-         else if (col.gameObject.tag == "EnemyTag" && PlayerHealth == 1)
+         else if (col.gameObject.tag == "EnemyTag" && PlayerHealth == 1 && !player.isAttacking) // aggiunta variabile per distinzione attacco/morte
             {
             PlayerHealth -= damage;
             col.gameObject.SetActive(false);

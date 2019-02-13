@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     private Rigidbody2D myRigidbody;
     private bool grounded;
+    public bool isAttacking; //aggiunto per distinguere la collisione da attacco da quella di morte
     public LayerMask whatIsGround;
     private BoxCollider2D myCollider;
     public GameObject playerSword;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour {
         myCollider = GetComponent<BoxCollider2D>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        isAttacking = false;
 
 	}
 	
@@ -61,18 +63,20 @@ public class PlayerController : MonoBehaviour {
         
     }
 
-    public IEnumerator Attack()
+    public IEnumerator Attack() // aggiunta variabile per distinzione attacco/morte
     {
         playerSword.SetActive(true);
         myAnimator.SetTrigger("Attack");
+        isAttacking = true;
         yield return new WaitForSeconds(.5f);
         playerSword.SetActive(false);
+        isAttacking = false;
     }
 
     //Player pickups a coin
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("CoinTag"))
+        if(collision.gameObject.CompareTag("CoinTag") && !isAttacking) // aggiunta la variabile di distinzione
         {
             collision.gameObject.SetActive(false);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
