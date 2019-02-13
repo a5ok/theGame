@@ -85,12 +85,6 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-        if(collision.gameObject.CompareTag("EndLevel"))
-        {
-            print("cazzo in culo");
-            GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
-            SceneManager.LoadScene(1);
-        }
     }
 
 
