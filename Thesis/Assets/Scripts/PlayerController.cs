@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         isAttacking = false;
-
+        
 	}
 	
 	// Update is called once per frame
@@ -60,6 +60,25 @@ public class PlayerController : MonoBehaviour {
                
             }
         }
+
+        if (EndLevel.hasFinished)
+        {
+            myRigidbody.velocity = new Vector2(0, 0);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                EndLevel.hasFinished = false;
+                GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
+            }
+            else if (Input.GetButtonDown("Jump"))
+            {
+                SceneManager.LoadScene("MainMenu");
+                EndLevel.hasFinished = false;
+                GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
+
+            }
+        }
+
         
     }
 
@@ -80,13 +99,6 @@ public class PlayerController : MonoBehaviour {
         {
             collision.gameObject.SetActive(false);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
-
-        }
-
-        if(collision.gameObject.CompareTag("EndLevel"))
-        {
-            GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
-            SceneManager.LoadScene(1);
         }
     }
 

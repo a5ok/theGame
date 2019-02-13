@@ -14,9 +14,6 @@ public class WaitForPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player.SetActive(false);
-       
-
-
     }
 	
 	// Update is called once per frame
