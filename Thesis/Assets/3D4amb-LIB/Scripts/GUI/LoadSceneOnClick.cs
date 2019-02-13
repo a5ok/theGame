@@ -16,5 +16,10 @@ public class LoadSceneOnClick : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-	
+
+
+
+   
+
+
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaitForPlayer : MonoBehaviour {
 
     [SerializeField] public GameObject player;
+    [SerializeField] public GameObject sword;
     [SerializeField] public GameObject start;
     [SerializeField] public GameObject textSx;
     [SerializeField] public GameObject textDx;
@@ -13,7 +14,10 @@ public class WaitForPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player.SetActive(false);
-	}
+       
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,6 +26,7 @@ public class WaitForPlayer : MonoBehaviour {
         {
             waitingToStartGame = false;
             player.SetActive(true);
+            sword.SetActive(false);
             start.SetActive(false);
             textSx.SetActive(false);
             textDx.SetActive(false);
