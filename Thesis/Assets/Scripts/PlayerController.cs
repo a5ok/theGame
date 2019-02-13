@@ -82,7 +82,6 @@ public class PlayerController : MonoBehaviour {
         {
             collision.gameObject.SetActive(false);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
-
         }
 
     }
