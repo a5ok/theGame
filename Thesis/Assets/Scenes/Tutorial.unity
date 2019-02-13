@@ -4748,7 +4748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636462848}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 151.34, y: -0.64, z: 0}
+  m_LocalPosition: {x: 103.759995, y: -0.64, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 1798863751}
@@ -8376,7 +8376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255401451}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 169.58, y: -0.64, z: 0}
+  m_LocalPosition: {x: 122, y: -0.64, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 502768240}
@@ -9550,7 +9550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426682335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 147.8, y: -0.2, z: 0}
+  m_LocalPosition: {x: 147, y: -0.2, z: 0}
   m_LocalScale: {x: 0.053039063, y: 7.3, z: 0.73}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9569,6 +9569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endText: {fileID: 1813783070}
+  myAnimator: {fileID: 815875004}
 --- !u!1 &1428471833
 GameObject:
   m_ObjectHideFlags: 0

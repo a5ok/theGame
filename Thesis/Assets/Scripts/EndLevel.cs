@@ -6,6 +6,8 @@ public class EndLevel : MonoBehaviour
 {
     static public bool hasFinished;
     public GameObject endText;
+    public Animator myAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class EndLevel : MonoBehaviour
         if (col.gameObject.tag == "PlayerTag")
         {
             print("fine");
+            myAnimator.SetTrigger("Win");
             hasFinished = true;
             endText.SetActive(true);
         }
