@@ -362,7 +362,7 @@ MonoBehaviour:
   padding: 0.2
   barWidth: 15
   maxScaleY: 25
-  distanceScoreTextToBar: 1
+  distanceScoreTextToBar: 3
   distanceDateTextToBar: 0.2
   EasyColor: {r: 0, g: 0.10015228, b: 0.5808823, a: 0}
   MediumColor: {r: 0.07298875, g: 0.19886495, b: 0.66176474, a: 0}
