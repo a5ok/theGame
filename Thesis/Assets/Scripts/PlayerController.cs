@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+
         if (EndLevel.hasFinished)
         {
             myRigidbody.velocity = new Vector2(0, 0);
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour {
 
             }
         }
+
 
         
     }
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour {
             collision.gameObject.SetActive(false);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
         }
+
     }
 
 
