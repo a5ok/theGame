@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         isAttacking = false;
-        
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -60,7 +60,6 @@ public class PlayerController : MonoBehaviour {
                
             }
         }
-
 
         if (EndLevel.hasFinished)
         {

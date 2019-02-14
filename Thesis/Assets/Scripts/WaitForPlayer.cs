@@ -9,11 +9,18 @@ public class WaitForPlayer : MonoBehaviour {
     [SerializeField] public GameObject start;
     [SerializeField] public GameObject textSx;
     [SerializeField] public GameObject textDx;
+    private GameObject[] enemies;
     private bool waitingToStartGame = true;
 
 	// Use this for initialization
 	void Start () {
         player.SetActive(false);
+        enemies = GameObject.FindGameObjectsWithTag("EnemyTag");
+
+        foreach (GameObject gos in enemies)
+        {
+            gos.SetActive(false);
+        }
     }
 	
 	// Update is called once per frame
@@ -27,6 +34,11 @@ public class WaitForPlayer : MonoBehaviour {
             start.SetActive(false);
             textSx.SetActive(false);
             textDx.SetActive(false);
+
+            foreach (GameObject gos in enemies)
+            {
+                gos.SetActive(true);
+            }
         }
         
     }
