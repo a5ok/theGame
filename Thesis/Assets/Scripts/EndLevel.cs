@@ -5,8 +5,7 @@ using UnityEngine;
 public class EndLevel : MonoBehaviour
 {
     static public bool hasFinished;
-    public GameObject endTextSx;
-    public GameObject endTextDx;
+    public GameObject endText;
     public Animator myAnimator;
 
     // Start is called before the first frame update
@@ -21,17 +20,14 @@ public class EndLevel : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (collision.gameObject.tag == "PlayerTag")
+        if (col.gameObject.tag == "PlayerTag")
         {
             print("fine");
             myAnimator.SetTrigger("Win");
             hasFinished = true;
-            endTextSx.SetActive(true);
-            endTextDx.SetActive(true);
+            endText.SetActive(true);
         }
     }
-
-   
 }
