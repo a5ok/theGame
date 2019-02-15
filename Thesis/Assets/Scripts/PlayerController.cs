@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     private Rigidbody2D myRigidbody;
     private bool grounded;
+    private bool playerIsFalling;
+    public static bool playerIsFellDown;
+    private float currentFallTime;
+    public float maxFallTime;
     public bool isAttacking; //aggiunto per distinguere la collisione da attacco da quella di morte
     public LayerMask whatIsGround;
     private BoxCollider2D myCollider;
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         isAttacking = false;
+        playerIsFellDown = false;
 
     }
 	
@@ -43,6 +48,24 @@ public class PlayerController : MonoBehaviour {
         //Player attacks when A button is clicked
         if (grounded && Input.GetButtonDown("Fire1"))
             StartCoroutine(Attack());
+
+        //Check if player is grounded or not
+        if (!grounded)
+            playerIsFalling = true;
+        else
+        {
+            currentFallTime = 0;
+            playerIsFalling = false;
+        }
+
+        if (playerIsFalling)
+            currentFallTime = currentFallTime + Time.deltaTime;
+
+        
+
+        if (currentFallTime > maxFallTime)
+            playerIsFellDown = true;
+
 
         //Player dies when loses all lives
         if (Death.isDead)

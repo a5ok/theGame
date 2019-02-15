@@ -24,6 +24,12 @@ public class Death : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (PlayerController.playerIsFellDown)
+            PlayerDeath();
+    }
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "EnemyTag" && PlayerHealth > 1 && !player.isAttacking) // aggiunta variabile per distinzione attacco/morte
@@ -53,15 +59,38 @@ public class Death : MonoBehaviour
         {
             PlayerHealth -= damage;
             col.gameObject.SetActive(false);
-            print(PlayerHealth);
-            redHeartsSx[0].SetActive(false);
-            redHeartsDx[0].SetActive(false);
-            greyHeartsSx[0].SetActive(true);
-            greyHeartsDx[0].SetActive(true);
-            isDead = true;
-            myAnimator.SetTrigger("Dead");
-            print("boolean a true");
-            deathText.SetActive(true);
+            PlayerDeath();
         }
+    }
+
+
+
+    void PlayerDeath()
+    {
+        foreach(GameObject gos in redHeartsSx)
+        {
+            gos.SetActive(false);
+        }
+
+        foreach (GameObject gos in greyHeartsSx)
+        {
+            gos.SetActive(true);
+        }
+
+        foreach (GameObject gos in redHeartsDx)
+        {
+            gos.SetActive(false);
+        }
+
+        foreach (GameObject gos in greyHeartsDx)
+        {
+            gos.SetActive(true);
+        }
+
+        isDead = true;
+        myAnimator.SetTrigger("Dead");
+        deathText.SetActive(true);
+
+
     }
 }
