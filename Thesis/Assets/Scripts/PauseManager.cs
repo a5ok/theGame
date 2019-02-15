@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     private bool paused = false;
-    public GameObject pauseText;
+    public GameObject pauseTextSx;
+    public GameObject pauseTextDx;
     // Start is called before the first frame update
     void Start()
     {
