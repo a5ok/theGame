@@ -23,12 +23,14 @@ public class PauseManager : MonoBehaviour
         else if (paused)
         {
             Time.timeScale = 0f;
-            pauseText.SetActive(true);  
+            pauseTextSx.SetActive(true);
+            pauseTextDx.SetActive(true);
             if (Input.GetButtonDown("Fire2"))
             {
                 Time.timeScale = 1f;
                 paused = false;
-                pauseText.SetActive(false);
+                pauseTextSx.SetActive(false);
+                pauseTextDx.SetActive(false);
             }
             if (Input.GetButtonDown("Jump") && paused)
             {
