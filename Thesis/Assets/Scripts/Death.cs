@@ -7,15 +7,14 @@ public class Death : MonoBehaviour
     public int PlayerHealth = 3;
     static public bool isDead = false;
     int damage = 1;
-    public GameObject deathText;
+    public GameObject deathTextSx;
+    public GameObject deathTextDx;
     public Animator myAnimator;
     private PlayerController player;
 
 
-    public GameObject[] redHeartsSx = new GameObject[3];
-    public GameObject[] redHeartsDx = new GameObject[3];
-    public GameObject[] greyHeartsSx = new GameObject[3];
-    public GameObject[] greyHeartsDx = new GameObject[3];
+    public GameObject[] redHearts = new GameObject[3];
+    public GameObject[] greyHearts = new GameObject[3];
 
 
     void Awake()
@@ -36,22 +35,17 @@ public class Death : MonoBehaviour
         {
             PlayerHealth -= damage;
             col.gameObject.SetActive(false);
-            print(PlayerHealth);
-
+           
             if (PlayerHealth == 2)
             {
-                redHeartsSx[2].SetActive(false);
-                redHeartsDx[2].SetActive(false);
-                greyHeartsSx[2].SetActive(true);
-                greyHeartsDx[2].SetActive(true);
+                redHearts[2].SetActive(false);
+                greyHearts[2].SetActive(true);
             }
 
             else if (PlayerHealth == 1)
             {
-                redHeartsSx[1].SetActive(false);
-                redHeartsDx[1].SetActive(false);
-                greyHeartsSx[1].SetActive(true);
-                greyHeartsDx[1].SetActive(true);
+                redHearts[1].SetActive(false);
+                greyHearts[1].SetActive(true);
             }
         }
 
@@ -67,29 +61,20 @@ public class Death : MonoBehaviour
 
     void PlayerDeath()
     {
-        foreach(GameObject gos in redHeartsSx)
+        foreach(GameObject gos in redHearts)
         {
             gos.SetActive(false);
         }
 
-        foreach (GameObject gos in greyHeartsSx)
-        {
-            gos.SetActive(true);
-        }
-
-        foreach (GameObject gos in redHeartsDx)
-        {
-            gos.SetActive(false);
-        }
-
-        foreach (GameObject gos in greyHeartsDx)
+        foreach (GameObject gos in greyHearts)
         {
             gos.SetActive(true);
         }
 
         isDead = true;
         myAnimator.SetTrigger("Dead");
-        deathText.SetActive(true);
+        deathTextSx.SetActive(true);
+        deathTextDx.SetActive(true);
 
 
     }

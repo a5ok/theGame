@@ -48,6 +48,9 @@ TagManager:
   - name: LevelElements
     uniqueID: 4207943779
     locked: 0
+  - name: Player&Enemies
+    uniqueID: 1068761149
+    locked: 0
   - name: GUI
     uniqueID: 3320569085
     locked: 0
