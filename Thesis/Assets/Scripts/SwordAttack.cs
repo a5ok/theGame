@@ -6,6 +6,7 @@ public class SwordAttack : MonoBehaviour
 {
     private PlayerController player;
     private Collider2D swordAttack;
+    public ParticleSystem particles;
 
     void Awake() 
     {
@@ -18,7 +19,11 @@ public class SwordAttack : MonoBehaviour
     {
         if (collision.collider.tag == "EnemyTag" && player.isAttacking)
         {
-            EnemyController.hit = true;
+            ParticleSystem ps = Instantiate(particles, transform.position, Quaternion.identity);
+            ps.Play();
+            collision.collider.GetComponent<BoxCollider2D>().enabled = false;
+            collision.collider.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(collision.collider.gameObject, 4f);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(10);
 
         }
