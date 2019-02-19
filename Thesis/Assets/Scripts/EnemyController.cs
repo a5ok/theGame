@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float moveSpeed;
+    public bool isActive;
     private Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
@@ -17,8 +18,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
-    
+        if (isActive)
+            myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
+        else
+            myRigidbody.velocity = new Vector2(0, 0);
+
     }
 
 }
