@@ -15,17 +15,11 @@ public class EndLevel : MonoBehaviour
         hasFinished = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //When the player enters the EndLevel collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PlayerTag")
         {
-            print("fine");
             myAnimator.SetTrigger("Win");
             hasFinished = true;
             endTextSx.SetActive(true);
