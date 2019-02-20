@@ -2065,7 +2065,7 @@ GameObject:
   - component: {fileID: 437479299}
   - component: {fileID: 437479298}
   m_Layer: 0
-  m_Name: Enemy (3)
+  m_Name: Enemy 3
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2829,6 +2829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseTextSx: {fileID: 48618169}
   pauseTextDx: {fileID: 1561588065}
+  textBackGroundSx: {fileID: 0}
+  textBackGroundDx: {fileID: 0}
 --- !u!4 &652201331
 Transform:
   m_ObjectHideFlags: 0
@@ -3392,6 +3394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endTextSx: {fileID: 46033862}
   endTextDx: {fileID: 1931339766}
+  textBackGroundSx: {fileID: 0}
+  textBackGroundDx: {fileID: 0}
   myAnimator: {fileID: 1996596210}
 --- !u!61 &832377911
 BoxCollider2D:
@@ -4837,7 +4841,7 @@ GameObject:
   - component: {fileID: 1062480118}
   - component: {fileID: 1062480117}
   m_Layer: 0
-  m_Name: Enemy (2)
+  m_Name: Enemy 2
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5937,7 +5941,7 @@ GameObject:
   - component: {fileID: 1274834636}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: EnemyTag
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6292,7 +6296,7 @@ GameObject:
   - component: {fileID: 1332563389}
   - component: {fileID: 1332563388}
   m_Layer: 0
-  m_Name: Enemy (1)
+  m_Name: Enemy 1
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9606,6 +9610,8 @@ MonoBehaviour:
   PlayerHealth: 3
   deathTextSx: {fileID: 570094077}
   deathTextDx: {fileID: 1359374605}
+  textBackGroundSx: {fileID: 0}
+  textBackGroundDx: {fileID: 0}
   myAnimator: {fileID: 1996596210}
   redHearts:
   - {fileID: 1814085247}
