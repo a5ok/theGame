@@ -8,6 +8,7 @@ TagManager:
   - EnemyTag
   - CoinTag
   - EndLevel
+  - PotionTag
   layers:
   - Default
   - TransparentFX

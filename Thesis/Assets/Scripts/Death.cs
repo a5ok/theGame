@@ -55,6 +55,32 @@ public class Death : MonoBehaviour
             col.gameObject.SetActive(false);
             PlayerDeath();
         }
+
+        //If the player picks up a potion 
+        if(col.gameObject.tag == "PotionTag")
+        {
+
+            if (PlayerHealth == 3)
+                col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            if (PlayerHealth < 3)
+            {
+                PlayerHealth += damage;
+                col.gameObject.SetActive(false);
+
+                if (PlayerHealth == 3)
+                {
+                    redHearts[2].SetActive(true);
+                    greyHearts[2].SetActive(false);
+                }
+
+                if (PlayerHealth == 2)
+                {
+                    redHearts[1].SetActive(true);
+                    greyHearts[1].SetActive(false);
+                }
+            }
+        }
     }
 
 
