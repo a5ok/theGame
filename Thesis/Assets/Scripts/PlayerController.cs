@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour {
         myAnimator = GetComponent<Animator>();
         isAttacking = false;
         playerIsFellDown = false;
+        Death.isDead = false;
+
 
     }
 	
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour {
         myAnimator.SetFloat("vSpeed", myRigidbody.velocity.y);
 
         //Player attacks when A button is clicked
-        if (grounded && Input.GetButtonDown("Fire1"))
+        if (grounded && Input.GetButtonDown("Fire1") && !Death.isDead)
             StartCoroutine(Attack());
 
         //Check if player is grounded or not
@@ -61,8 +63,6 @@ public class PlayerController : MonoBehaviour {
         if (playerIsFalling)
             currentFallTime = currentFallTime + Time.deltaTime;
 
-        
-
         if (currentFallTime > maxFallTime)
             playerIsFellDown = true;
 
@@ -71,17 +71,13 @@ public class PlayerController : MonoBehaviour {
         if (Death.isDead)
         {
             myRigidbody.velocity = new Vector2(0, 0);
+
             if (Input.GetButtonDown("Fire1"))
-            {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                Death.isDead = false;
-            }
             else if (Input.GetButtonDown("Jump"))
-            {
                 SceneManager.LoadScene("MainMenu");
-                Death.isDead = false;
-               
-            }
+
+
         }
 
         if (EndLevel.hasFinished)
@@ -119,7 +115,7 @@ public class PlayerController : MonoBehaviour {
     //Player pickups a coin
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("CoinTag") && !isAttacking) // aggiunta la variabile di distinzione
+        if(collision.gameObject.CompareTag("CoinTag")) // aggiunta la variabile di distinzione
         {
             collision.gameObject.SetActive(false);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
