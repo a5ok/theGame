@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
     public float jumpForce;
+    public float hitForce;
     private Rigidbody2D myRigidbody;
     private bool grounded;
     private bool playerIsFalling;
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour {
         if (currentFallTime > maxFallTime)
             playerIsFellDown = true;
 
-
+        
         //Player dies when loses all lives
         if (Death.isDead)
         {

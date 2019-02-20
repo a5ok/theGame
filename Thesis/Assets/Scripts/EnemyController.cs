@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
         myRigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -24,5 +24,19 @@ public class EnemyController : MonoBehaviour
             myRigidbody.velocity = new Vector2(0, 0);
 
     }
-
+    //Enemies ignore obstacles
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "ObstacleTag")
+        {
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "ObstacleTag")
+        {
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+    }
 }

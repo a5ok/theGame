@@ -81,7 +81,33 @@ public class Death : MonoBehaviour
                 }
             }
         }
+
+        //If the player hits an obstacle
+        if(col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
+        {
+            PlayerHealth -= damage;
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            if (PlayerHealth == 2)
+            {
+                redHearts[2].SetActive(false);
+                greyHearts[2].SetActive(true);
+            }
+
+            else if (PlayerHealth == 1)
+            {
+                redHearts[1].SetActive(false);
+                greyHearts[1].SetActive(true);
+            }
+        }
+        else if (col.gameObject.tag == "ObstacleTag" && PlayerHealth == 1) 
+        {
+            PlayerHealth -= damage;
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            PlayerDeath();
+        }
     }
+
 
 
 

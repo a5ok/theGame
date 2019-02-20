@@ -9,6 +9,7 @@ TagManager:
   - CoinTag
   - EndLevel
   - PotionTag
+  - ObstacleTag
   layers:
   - Default
   - TransparentFX
