@@ -9,10 +9,10 @@ public class Death : MonoBehaviour
     int damage = 1;
     public GameObject deathTextSx;
     public GameObject deathTextDx;
+    [SerializeField] public GameObject textBackGroundSx;
+    [SerializeField]  public GameObject textBackGroundDx;
     public Animator myAnimator;
     private PlayerController player;
-
-
     public GameObject[] redHearts = new GameObject[3];
     public GameObject[] greyHearts = new GameObject[3];
 
@@ -75,6 +75,8 @@ public class Death : MonoBehaviour
         myAnimator.SetTrigger("Dead");
         deathTextSx.SetActive(true);
         deathTextDx.SetActive(true);
+        textBackGroundSx.SetActive(true);
+        textBackGroundDx.SetActive(true);
 
 
     }

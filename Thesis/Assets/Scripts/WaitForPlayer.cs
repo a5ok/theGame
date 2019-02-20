@@ -11,10 +11,13 @@ public class WaitForPlayer : MonoBehaviour {
     [SerializeField] public GameObject textDx;
     private GameObject[] enemies;
     private bool waitingToStartGame = true;
+    public static bool waitForPlayer;
 
 	// Use this for initialization
 	void Start () {
+
         player.SetActive(false);
+        waitForPlayer = true;
         enemies = GameObject.FindGameObjectsWithTag("EnemyTag");
 
         foreach (GameObject gos in enemies)
@@ -29,6 +32,7 @@ public class WaitForPlayer : MonoBehaviour {
         if(waitingToStartGame && Input.GetButtonDown("Jump"))
         {
             waitingToStartGame = false;
+            waitForPlayer = false;
             player.SetActive(true);
             sword.SetActive(false);
             start.SetActive(false);

@@ -7,12 +7,16 @@ public class EndLevel : MonoBehaviour
     static public bool hasFinished;
     public GameObject endTextSx;
     public GameObject endTextDx;
+    public GameObject textBackGroundSx;
+    public GameObject textBackGroundDx;
     public Animator myAnimator;
+    public static bool endLevel;
 
     // Start is called before the first frame update
     void Start()
     {
         hasFinished = false;
+        endLevel = false;
     }
 
     //When the player enters the EndLevel collider
@@ -21,11 +25,17 @@ public class EndLevel : MonoBehaviour
         if (collision.gameObject.tag == "PlayerTag")
         {
             myAnimator.SetTrigger("Win");
+            endLevel = true;
             hasFinished = true;
             endTextSx.SetActive(true);
             endTextDx.SetActive(true);
+            textBackGroundSx.SetActive(true);
+            textBackGroundDx.SetActive(true);
         }
+
     }
 
    
 }
+
+
