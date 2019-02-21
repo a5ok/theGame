@@ -29,6 +29,7 @@ public class Death : MonoBehaviour
             PlayerDeath();
     }
 
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "EnemyTag" && PlayerHealth > 1 && !player.isAttacking) // aggiunta variabile per distinzione attacco/morte
@@ -82,30 +83,35 @@ public class Death : MonoBehaviour
             }
         }
     }
+
+
     //obstacles are trigger
     private void OnTriggerEnter2D(Collider2D col)
     {
-        //If the player hits an obstacle
-        if (col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
+        if (gameObject.tag == "PlayerTag")
         {
-            PlayerHealth -= damage;           
-
-            if (PlayerHealth == 2)
+            //If the player hits an obstacle
+            if (col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
             {
-                redHearts[2].SetActive(false);
-                greyHearts[2].SetActive(true);
-            }
+                PlayerHealth -= damage;
 
-            else if (PlayerHealth == 1)
-            {
-                redHearts[1].SetActive(false);
-                greyHearts[1].SetActive(true);
+                if (PlayerHealth == 2)
+                {
+                    redHearts[2].SetActive(false);
+                    greyHearts[2].SetActive(true);
+                }
+
+                else if (PlayerHealth == 1)
+                {
+                    redHearts[1].SetActive(false);
+                    greyHearts[1].SetActive(true);
+                }
             }
-        }
-        else if (col.gameObject.tag == "ObstacleTag" && PlayerHealth == 1)
-        {
-            PlayerHealth -= damage;            
-            PlayerDeath();
+            else if (col.gameObject.tag == "ObstacleTag" && PlayerHealth == 1)
+            {
+                PlayerHealth -= damage;
+                PlayerDeath();
+            }
         }
     }
 
