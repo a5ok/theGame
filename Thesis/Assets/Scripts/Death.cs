@@ -57,7 +57,7 @@ public class Death : MonoBehaviour
         }
 
         //If the player picks up a potion 
-        if(col.gameObject.tag == "PotionTag")
+        if (col.gameObject.tag == "PotionTag")
         {
 
             if (PlayerHealth == 3)
@@ -81,12 +81,14 @@ public class Death : MonoBehaviour
                 }
             }
         }
-
+    }
+    //obstacles are trigger
+    private void OnTriggerEnter2D(Collider2D col)
+    {
         //If the player hits an obstacle
-        if(col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
+        if (col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
         {
-            PlayerHealth -= damage;
-            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            PlayerHealth -= damage;           
 
             if (PlayerHealth == 2)
             {
@@ -100,10 +102,9 @@ public class Death : MonoBehaviour
                 greyHearts[1].SetActive(true);
             }
         }
-        else if (col.gameObject.tag == "ObstacleTag" && PlayerHealth == 1) 
+        else if (col.gameObject.tag == "ObstacleTag" && PlayerHealth == 1)
         {
-            PlayerHealth -= damage;
-            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            PlayerHealth -= damage;            
             PlayerDeath();
         }
     }
