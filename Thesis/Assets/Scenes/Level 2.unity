@@ -1300,7 +1300,7 @@ GameObject:
   - component: {fileID: 171017771}
   - component: {fileID: 171017770}
   - component: {fileID: 171017769}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5772,7 +5772,7 @@ GameObject:
   - component: {fileID: 1252509299}
   - component: {fileID: 1252509298}
   - component: {fileID: 1252509297}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
