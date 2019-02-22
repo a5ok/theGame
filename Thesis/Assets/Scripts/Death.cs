@@ -29,7 +29,6 @@ public class Death : MonoBehaviour
             PlayerDeath();
     }
 
-
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "EnemyTag" && PlayerHealth > 1 && !player.isAttacking) // aggiunta variabile per distinzione attacco/morte
@@ -83,12 +82,9 @@ public class Death : MonoBehaviour
             }
         }
     }
-
-
     //obstacles are trigger
     private void OnTriggerEnter2D(Collider2D col)
     {
-
         //If the player hits an obstacle
         if (col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
         {
