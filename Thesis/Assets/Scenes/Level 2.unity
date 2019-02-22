@@ -2916,11 +2916,7 @@ GameObject:
   - component: {fileID: 576970387}
   - component: {fileID: 576970389}
   - component: {fileID: 576970388}
-<<<<<<< HEAD
   m_Layer: 12
-=======
-  m_Layer: 0
->>>>>>> 81f1c585a871f2be72af37101142dc286994e472
   m_Name: Obstacle 2
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -8402,11 +8398,7 @@ GameObject:
   - component: {fileID: 1669748302}
   - component: {fileID: 1669748304}
   - component: {fileID: 1669748303}
-<<<<<<< HEAD
   m_Layer: 12
-=======
-  m_Layer: 0
->>>>>>> 81f1c585a871f2be72af37101142dc286994e472
   m_Name: Obstacle 3
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
