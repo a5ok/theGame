@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2319245}
   - component: {fileID: 2319244}
   - component: {fileID: 2319243}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (5)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 60882076}
   - component: {fileID: 60882075}
   - component: {fileID: 60882074}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (3)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 86570452}
   - component: {fileID: 86570451}
   - component: {fileID: 86570450}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (8)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -1112,7 +1112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96737985}
   - component: {fileID: 96737986}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 117177767}
   - component: {fileID: 117177766}
   - component: {fileID: 117177765}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1233,7 +1233,7 @@ GameObject:
   - component: {fileID: 118027928}
   - component: {fileID: 118027927}
   - component: {fileID: 118027926}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (11)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   - component: {fileID: 167620738}
   - component: {fileID: 167620737}
   - component: {fileID: 167620736}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (1)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -2196,7 +2196,7 @@ GameObject:
   - component: {fileID: 220312695}
   - component: {fileID: 220312694}
   - component: {fileID: 220312693}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -2476,7 +2476,7 @@ GameObject:
   - component: {fileID: 233521380}
   - component: {fileID: 233521379}
   - component: {fileID: 233521378}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy 3
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
@@ -3158,7 +3158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330639172}
   - component: {fileID: 330639173}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3742,7 +3742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426378253}
   - component: {fileID: 426378254}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4322,7 +4322,7 @@ GameObject:
   - component: {fileID: 520226841}
   - component: {fileID: 520226840}
   - component: {fileID: 520226839}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (17)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -4758,7 +4758,7 @@ GameObject:
   - component: {fileID: 576225264}
   - component: {fileID: 576225263}
   - component: {fileID: 576225262}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (7)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -5190,7 +5190,7 @@ GameObject:
   - component: {fileID: 641785597}
   - component: {fileID: 641785596}
   - component: {fileID: 641785595}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (18)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -6072,7 +6072,7 @@ GameObject:
   - component: {fileID: 754883758}
   - component: {fileID: 754883757}
   - component: {fileID: 754883756}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (10)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -6583,7 +6583,7 @@ GameObject:
   - component: {fileID: 818587866}
   - component: {fileID: 818587865}
   - component: {fileID: 818587864}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (4)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -7058,7 +7058,7 @@ GameObject:
   - component: {fileID: 839441506}
   - component: {fileID: 839441505}
   - component: {fileID: 839441504}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (16)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -7253,7 +7253,7 @@ GameObject:
   - component: {fileID: 856727430}
   - component: {fileID: 856727429}
   - component: {fileID: 856727428}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (19)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -8130,7 +8130,7 @@ GameObject:
   - component: {fileID: 909130732}
   - component: {fileID: 909130731}
   - component: {fileID: 909130736}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy 1
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
@@ -9364,7 +9364,7 @@ GameObject:
   - component: {fileID: 1027819153}
   - component: {fileID: 1027819152}
   - component: {fileID: 1027819151}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (9)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -9905,7 +9905,7 @@ GameObject:
   - component: {fileID: 1125656893}
   - component: {fileID: 1125656892}
   - component: {fileID: 1125656891}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (14)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -10582,7 +10582,7 @@ GameObject:
   - component: {fileID: 1263732849}
   - component: {fileID: 1263732848}
   - component: {fileID: 1263732853}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy 2
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
@@ -13211,7 +13211,7 @@ GameObject:
   - component: {fileID: 1578106235}
   - component: {fileID: 1578106234}
   - component: {fileID: 1578106233}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (15)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -13515,7 +13515,7 @@ GameObject:
   - component: {fileID: 1584773479}
   - component: {fileID: 1584773478}
   - component: {fileID: 1584773477}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy 4
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}
@@ -14172,7 +14172,7 @@ GameObject:
   - component: {fileID: 1681645115}
   - component: {fileID: 1681645114}
   - component: {fileID: 1681645113}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (6)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -14324,6 +14324,10 @@ PrefabInstance:
     - target: {fileID: 159448, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 159448, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 443180, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15100,7 +15104,7 @@ GameObject:
   - component: {fileID: 1774717124}
   - component: {fileID: 1774717123}
   - component: {fileID: 1774717122}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (22)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -15216,7 +15220,7 @@ GameObject:
   - component: {fileID: 1786076515}
   - component: {fileID: 1786076514}
   - component: {fileID: 1786076513}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (21)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -15997,7 +16001,7 @@ GameObject:
   - component: {fileID: 1877656560}
   - component: {fileID: 1877656559}
   - component: {fileID: 1877656558}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (2)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -17079,7 +17083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044819668}
   - component: {fileID: 2044819669}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17783,7 +17787,7 @@ GameObject:
   - component: {fileID: 2105387851}
   - component: {fileID: 2105387850}
   - component: {fileID: 2105387849}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (20)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}

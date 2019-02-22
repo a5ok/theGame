@@ -1323,7 +1323,7 @@ GameObject:
   - component: {fileID: 91368804}
   - component: {fileID: 91368803}
   - component: {fileID: 91368802}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (7)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -3660,7 +3660,7 @@ GameObject:
   - component: {fileID: 301094245}
   - component: {fileID: 301094244}
   - component: {fileID: 301094243}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (3)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -3964,7 +3964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 324372485}
   - component: {fileID: 324372487}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 3
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -4282,7 +4282,7 @@ GameObject:
   - component: {fileID: 361597269}
   - component: {fileID: 361597268}
   - component: {fileID: 361597267}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (19)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -5437,7 +5437,7 @@ GameObject:
   - component: {fileID: 442454596}
   - component: {fileID: 442454595}
   - component: {fileID: 442454594}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (1)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -5790,7 +5790,7 @@ GameObject:
   - component: {fileID: 449619808}
   - component: {fileID: 449619807}
   - component: {fileID: 449619806}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (8)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -5906,7 +5906,7 @@ GameObject:
   - component: {fileID: 450451707}
   - component: {fileID: 450451706}
   - component: {fileID: 450451705}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (22)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -6751,7 +6751,7 @@ GameObject:
   - component: {fileID: 494524561}
   - component: {fileID: 494524563}
   - component: {fileID: 494524562}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 2
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -7251,7 +7251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512327302}
   - component: {fileID: 512327303}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 4
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -7709,7 +7709,7 @@ GameObject:
   - component: {fileID: 551979012}
   - component: {fileID: 551979011}
   - component: {fileID: 551979010}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (21)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -10692,7 +10692,7 @@ GameObject:
   - component: {fileID: 825932111}
   - component: {fileID: 825932112}
   - component: {fileID: 825932113}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 5
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -11519,7 +11519,7 @@ GameObject:
   - component: {fileID: 855431675}
   - component: {fileID: 855431674}
   - component: {fileID: 855431673}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (18)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -12443,6 +12443,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 159448, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 443180, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
@@ -12656,7 +12660,7 @@ GameObject:
   - component: {fileID: 922245099}
   - component: {fileID: 922245098}
   - component: {fileID: 922245097}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (10)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -12851,7 +12855,7 @@ GameObject:
   - component: {fileID: 929283726}
   - component: {fileID: 929283725}
   - component: {fileID: 929283724}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (14)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -12966,7 +12970,7 @@ GameObject:
   - component: {fileID: 934824936}
   - component: {fileID: 934824938}
   - component: {fileID: 934824937}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 1
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -13073,7 +13077,7 @@ GameObject:
   - component: {fileID: 935221013}
   - component: {fileID: 935221012}
   - component: {fileID: 935221011}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (17)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -13189,7 +13193,7 @@ GameObject:
   - component: {fileID: 939971765}
   - component: {fileID: 939971764}
   - component: {fileID: 939971763}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (20)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -18382,7 +18386,7 @@ GameObject:
   - component: {fileID: 1270782627}
   - component: {fileID: 1270782629}
   - component: {fileID: 1270782628}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Potion 1
   m_TagString: PotionTag
   m_Icon: {fileID: 0}
@@ -19133,7 +19137,7 @@ GameObject:
   - component: {fileID: 1336500789}
   - component: {fileID: 1336500791}
   - component: {fileID: 1336500790}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 8
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -20161,7 +20165,7 @@ GameObject:
   - component: {fileID: 1454501647}
   - component: {fileID: 1454501646}
   - component: {fileID: 1454501645}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (16)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -20671,7 +20675,7 @@ GameObject:
   - component: {fileID: 1501358873}
   - component: {fileID: 1501358872}
   - component: {fileID: 1501358871}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (15)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -21215,7 +21219,7 @@ GameObject:
   - component: {fileID: 1534458548}
   - component: {fileID: 1534458550}
   - component: {fileID: 1534458549}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 7
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -21511,7 +21515,7 @@ GameObject:
   - component: {fileID: 1541886365}
   - component: {fileID: 1541886364}
   - component: {fileID: 1541886363}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (9)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -22022,7 +22026,7 @@ GameObject:
   - component: {fileID: 1590581048}
   - component: {fileID: 1590581047}
   - component: {fileID: 1590581046}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (5)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -23439,7 +23443,7 @@ GameObject:
   - component: {fileID: 1745238905}
   - component: {fileID: 1745238904}
   - component: {fileID: 1745238903}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (6)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -23713,7 +23717,7 @@ GameObject:
   - component: {fileID: 1760195821}
   - component: {fileID: 1760195820}
   - component: {fileID: 1760195819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -24447,7 +24451,7 @@ GameObject:
   - component: {fileID: 1783597948}
   - component: {fileID: 1783597947}
   - component: {fileID: 1783597946}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (2)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -25098,7 +25102,7 @@ GameObject:
   - component: {fileID: 1814634863}
   - component: {fileID: 1814634862}
   - component: {fileID: 1814634861}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (11)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -25570,7 +25574,7 @@ GameObject:
   - component: {fileID: 1827319629}
   - component: {fileID: 1827319628}
   - component: {fileID: 1827319627}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (4)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -25735,15 +25739,15 @@ RectTransform:
   m_GameObject: {fileID: 1841154968}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1.6, y: 0.8, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1963396085}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 506, y: 2}
-  m_SizeDelta: {x: 270, y: 280}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841154970
 MonoBehaviour:
@@ -26848,7 +26852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906121204}
   - component: {fileID: 1906121205}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 6
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -29534,7 +29538,7 @@ GameObject:
   - component: {fileID: 2088635856}
   - component: {fileID: 2088635858}
   - component: {fileID: 2088635857}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Obstacle 9
   m_TagString: ObstacleTag
   m_Icon: {fileID: 0}
@@ -29841,15 +29845,15 @@ RectTransform:
   m_GameObject: {fileID: 2114276756}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1.6, y: 0.8, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 884144887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 506.00006, y: 2}
-  m_SizeDelta: {x: 270.00006, y: 280}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114276758
 MonoBehaviour:
@@ -30057,7 +30061,7 @@ GameObject:
   - component: {fileID: 2134956070}
   - component: {fileID: 2134956069}
   - component: {fileID: 2134956068}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

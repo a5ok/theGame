@@ -2030,7 +2030,7 @@ GameObject:
   - component: {fileID: 331589625}
   - component: {fileID: 331589624}
   - component: {fileID: 331589623}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (1)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -3090,7 +3090,7 @@ GameObject:
   - component: {fileID: 557135687}
   - component: {fileID: 557135686}
   - component: {fileID: 557135685}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (2)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -3535,7 +3535,7 @@ GameObject:
   - component: {fileID: 587808873}
   - component: {fileID: 587808872}
   - component: {fileID: 587808871}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (3)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -4596,7 +4596,7 @@ GameObject:
   - component: {fileID: 823516614}
   - component: {fileID: 823516617}
   - component: {fileID: 823516616}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -5624,7 +5624,7 @@ GameObject:
   - component: {fileID: 1043641936}
   - component: {fileID: 1043641937}
   - component: {fileID: 1043641938}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5934,6 +5934,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 159448, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 443180, guid: b5699fa9edf2e1640b11045ae323aeff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.58
@@ -6090,7 +6094,7 @@ GameObject:
   - component: {fileID: 1106713975}
   - component: {fileID: 1106713974}
   - component: {fileID: 1106713973}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (6)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -8612,7 +8616,7 @@ GameObject:
   - component: {fileID: 1561383604}
   - component: {fileID: 1561383603}
   - component: {fileID: 1561383602}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (4)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
@@ -9394,7 +9398,7 @@ GameObject:
   - component: {fileID: 1754948634}
   - component: {fileID: 1754948633}
   - component: {fileID: 1754948632}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin (5)
   m_TagString: CoinTag
   m_Icon: {fileID: 0}
