@@ -3848,7 +3848,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437479296}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -69.1, y: 0.28, z: 0}
+  m_LocalPosition: {x: -72.59, y: 0.28, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 487591381}
@@ -4163,7 +4163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 487591381}
   - component: {fileID: 487591382}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9569,7 +9569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011419177}
   - component: {fileID: 1011419178}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10184,7 +10184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062480115}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -74.9, y: 0.28, z: 0}
+  m_LocalPosition: {x: -76.22, y: 0.28, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 2069287866}
@@ -13501,7 +13501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384183785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35, y: -2.63, z: 0}
+  m_LocalPosition: {x: -1.35, y: -2.75, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18602,7 +18602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1912422722}
   - component: {fileID: 1912422723}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19722,7 +19722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996596207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35, y: -2.63, z: 0}
+  m_LocalPosition: {x: -1.35, y: -2.75, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 117177767}
@@ -20416,7 +20416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069287866}
   - component: {fileID: 2069287867}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20644,7 +20644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097026065}
   - component: {fileID: 2097026066}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20735,7 +20735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107474609}
   - component: {fileID: 2107474610}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

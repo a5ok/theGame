@@ -1112,7 +1112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96737985}
   - component: {fileID: 96737986}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1146,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.38717562, y: 0.15696341}
+  m_Offset: {x: 0.6829545, y: 0.15696341}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1157,7 +1157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7743512, y: 1.3139267}
+  m_Size: {x: 2.365909, y: 1.3139267}
   m_EdgeRadius: 0
 --- !u!1 &117177764
 GameObject:
@@ -3158,7 +3158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330639172}
   - component: {fileID: 330639173}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3742,7 +3742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426378253}
   - component: {fileID: 426378254}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17083,7 +17083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044819668}
   - component: {fileID: 2044819669}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

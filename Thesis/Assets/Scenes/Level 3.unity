@@ -3344,7 +3344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 236791459}
   - component: {fileID: 236791460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17722,7 +17722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176712569}
   - component: {fileID: 1176712570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20998,7 +20998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385635194}
   - component: {fileID: 1385635195}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24766,7 +24766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692029265}
   - component: {fileID: 1692029266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29761,7 +29761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1951498988}
   - component: {fileID: 1951498989}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31150,7 +31150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999698503}
   - component: {fileID: 1999698504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

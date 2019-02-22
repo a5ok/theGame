@@ -7050,7 +7050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315792612}
   - component: {fileID: 1315792613}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActivationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8361,7 +8361,7 @@ GameObject:
   - component: {fileID: 1516754641}
   - component: {fileID: 1516754640}
   - component: {fileID: 1516754646}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Enemy 1
   m_TagString: EnemyTag
   m_Icon: {fileID: 0}

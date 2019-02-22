@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
@@ -16,10 +17,15 @@ public class Death : MonoBehaviour
     public GameObject[] redHearts = new GameObject[3];
     public GameObject[] greyHearts = new GameObject[3];
 
+    //used for graphical effects on invulnerability
+    Renderer ren;
+    Color col;
 
     void Awake()
     {
         player = GetComponentInParent<PlayerController>();
+        ren = GetComponent<Renderer>();
+        col = ren.material.color;
     }
 
 
@@ -36,6 +42,7 @@ public class Death : MonoBehaviour
         {
             PlayerHealth -= damage;
             col.gameObject.SetActive(false);
+            StartCoroutine("GetInvulnerable");
            
             if (PlayerHealth == 2)
             {
@@ -92,8 +99,8 @@ public class Death : MonoBehaviour
         //If the player hits an obstacle
         if (col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
         {
-            PlayerHealth -= damage;           
-
+            PlayerHealth -= damage;
+            StartCoroutine("GetInvulnerable");
             if (PlayerHealth == 2)
             {
                 redHearts[2].SetActive(false);
@@ -113,7 +120,30 @@ public class Death : MonoBehaviour
         }
     }
 
-
+    IEnumerator GetInvulnerable()
+    {
+        Physics2D.IgnoreLayerCollision(8, 12, true); //ignore obstacles
+        Physics2D.IgnoreLayerCollision(8, 14, true); //ignore enemies
+        col.a = 0.5f;
+        ren.material.color = col;
+        yield return new WaitForSeconds(.3f);
+        col.a = 1f;
+        ren.material.color = col;
+        yield return new WaitForSeconds(.3f);
+        col.a = 0.5f;
+        ren.material.color = col;
+        yield return new WaitForSeconds(.3f);
+        col.a = 1f;
+        ren.material.color = col;
+        yield return new WaitForSeconds(.3f);
+        col.a = 0.5f;
+        ren.material.color = col;
+        yield return new WaitForSeconds(.3f);
+        Physics2D.IgnoreLayerCollision(8, 12, false); //reset obstacles
+        Physics2D.IgnoreLayerCollision(8, 14, false); //reset enemies
+        col.a = 1f;
+        ren.material.color = col;
+    }
 
 
     void PlayerDeath()
