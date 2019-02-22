@@ -22,10 +22,10 @@ TagManager:
   - Player
   - Ground
   - Trigger
-  - 
-  - 
-  - 
-  - 
+  - Sword
+  - Obstacle
+  - Coin
+  - Enemy
   - 
   - 
   - 
