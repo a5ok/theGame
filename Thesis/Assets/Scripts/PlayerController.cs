@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour {
 
         if (EndLevel.hasFinished)
         {
-            myRigidbody.velocity = new Vector2(0, 0);
+            myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
             if (Input.GetButtonDown("Fire1"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
