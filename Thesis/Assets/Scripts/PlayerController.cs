@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour {
         playerSword.SetActive(true);
         myAnimator.SetTrigger("Attack");
         isAttacking = true;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
         playerSword.SetActive(false);
         isAttacking = false;
     }
