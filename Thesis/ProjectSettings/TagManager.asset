@@ -10,6 +10,7 @@ TagManager:
   - EndLevel
   - PotionTag
   - ObstacleTag
+  - SwordTag
   layers:
   - Default
   - TransparentFX
