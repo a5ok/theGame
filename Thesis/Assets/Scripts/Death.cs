@@ -16,6 +16,11 @@ public class Death : MonoBehaviour
     private PlayerController player;
     public GameObject[] redHearts = new GameObject[3];
     public GameObject[] greyHearts = new GameObject[3];
+    private AudioSource audioSource;
+    public AudioClip hit;
+    public AudioClip gameOver;
+    public AudioClip potion;
+
 
     //used for graphical effects on invulnerability
     Renderer ren;
@@ -26,6 +31,7 @@ public class Death : MonoBehaviour
         player = GetComponentInParent<PlayerController>();
         ren = GetComponent<Renderer>();
         col = ren.material.color;
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -41,6 +47,8 @@ public class Death : MonoBehaviour
         if (col.gameObject.tag == "EnemyTag" && PlayerHealth > 1 && !player.isAttacking) // aggiunta variabile per distinzione attacco/morte
         {
             PlayerHealth -= damage;
+            audioSource.clip = hit;
+            audioSource.Play();
             col.gameObject.SetActive(false);
             StartCoroutine("GetInvulnerable");
            
@@ -73,6 +81,8 @@ public class Death : MonoBehaviour
 
             if (PlayerHealth < 3)
             {
+                audioSource.clip = potion;
+                audioSource.Play();
                 PlayerHealth += damage;
                 col.gameObject.SetActive(false);
 
@@ -148,7 +158,7 @@ public class Death : MonoBehaviour
 
     void PlayerDeath()
     {
-        foreach(GameObject gos in redHearts)
+        foreach (GameObject gos in redHearts)
         {
             gos.SetActive(false);
         }
@@ -156,6 +166,12 @@ public class Death : MonoBehaviour
         foreach (GameObject gos in greyHearts)
         {
             gos.SetActive(true);
+        }
+
+        if (!isDead)
+        {
+            audioSource.clip = gameOver;
+            audioSource.Play();
         }
 
         isDead = true;

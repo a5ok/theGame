@@ -15,11 +15,15 @@ public class PlayerController : MonoBehaviour {
     private float currentFallTime;
     public float maxFallTime;
     public bool isAttacking; //aggiunto per distinguere la collisione da attacco da quella di morte
+    private AudioSource audioSource;
+    public AudioClip swordAttack;
+    public AudioClip jump;
+    public AudioClip coin;
     public LayerMask whatIsGround;
     private BoxCollider2D myCollider;
     public GameObject playerSword;
     private Animator myAnimator;
-   
+    
 
 	// Use this for initialization
 	void Start () {
@@ -27,11 +31,10 @@ public class PlayerController : MonoBehaviour {
         myCollider = GetComponent<BoxCollider2D>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         isAttacking = false;
         playerIsFellDown = false;
         Death.isDead = false;
-
-
     }
 	
 	// Update is called once per frame
@@ -43,7 +46,11 @@ public class PlayerController : MonoBehaviour {
 
         // Player jumps when X button is clicked
         if (grounded && Input.GetButtonDown("Jump"))
+        {
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+            audioSource.clip = jump;
+            audioSource.Play();
+        }
 
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
         myAnimator.SetFloat("vSpeed", myRigidbody.velocity.y);
@@ -71,6 +78,9 @@ public class PlayerController : MonoBehaviour {
         //Player dies when loses all lives
         if (Death.isDead)
         {
+           
+
+
             myRigidbody.velocity = new Vector2(0, 0);
 
             if (Input.GetButtonDown("Fire1"))
@@ -99,15 +109,16 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-
-        
     }
+
 
     public IEnumerator Attack() // aggiunta variabile per distinzione attacco/morte
     {
         playerSword.SetActive(true);
         myAnimator.SetTrigger("Attack");
         isAttacking = true;
+        audioSource.clip = swordAttack;
+        audioSource.Play();
         yield return new WaitForSeconds(.2f);
         playerSword.SetActive(false);
         isAttacking = false;
@@ -118,11 +129,14 @@ public class PlayerController : MonoBehaviour {
     {
         if(collision.gameObject.CompareTag("CoinTag")) // aggiunta la variabile di distinzione
         {
+            audioSource.PlayOneShot(coin, 0.5f);
             collision.gameObject.SetActive(false);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(1);
         }
 
     }
+
+
 
 
 }
