@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour {
         //Player dies when loses all lives
         if (Death.isDead)
         {
-            myRigidbody.velocity = new Vector2(0, 0);
+            myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
 
             if (Input.GetButtonDown("Fire1"))
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
