@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7cc26bbb894047916e02148705567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   LabelTag: 
 --- !u!114 &173124517
 MonoBehaviour:
@@ -1813,7 +1813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -127.00909}
+  m_AnchoredPosition: {x: 616.58203, y: -127.00879}
   m_SizeDelta: {x: 1053.1636, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348760903
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7cc26bbb894047916e02148705567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   LabelTag: 'User Settings for '
 --- !u!1 &358495763
 GameObject:
@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d8fdb4cd33d52428439e855baadd1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   HealtyEyeSlider: {fileID: 1208716623}
   TraspStartSlider: {fileID: 787460865}
   TraspEndSlider: {fileID: 1011096483}
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a6199c16e470440a2b05f9e3858cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   InputFieldGo: {fileID: 1920485525}
   AvatarButton: {fileID: 439635159}
 --- !u!114 &397419875
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8cab946b93ac3d42bfc04f24d8cb955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   avatarId: 0
 --- !u!114 &439635162
 MonoBehaviour:
@@ -3417,7 +3417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -143.0953}
+  m_AnchoredPosition: {x: 616.58203, y: -143.0957}
   m_SizeDelta: {x: 1053.1636, y: 139.33331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675099976
@@ -3932,7 +3932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 886503288}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   Tag: 'Trasparency start: '
 --- !u!1 &808672853
 GameObject:
@@ -4192,7 +4192,7 @@ RectTransform:
   - {fileID: 1496671858}
   - {fileID: 53370558}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4255,7 +4255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -132.02274}
+  m_AnchoredPosition: {x: 616.58203, y: -132.02246}
   m_SizeDelta: {x: 1053.1636, y: 124.045456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &917457593
@@ -5127,7 +5127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 494797505}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   Tag: 'Trasparency end: '
 --- !u!1 &1051986423
 GameObject:
@@ -5612,7 +5612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7461a7b0cf97947fd9b9e4502fd2d07b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5938,7 +5938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficultySlider: {fileID: 1252661694}
   eyeSlider: {fileID: 1984745216}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
 --- !u!1 &1127197962
 GameObject:
   m_ObjectHideFlags: 0
@@ -6043,7 +6043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 1177723885}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   Tag: 'EyePatch end: '
 --- !u!1 &1167853806
 GameObject:
@@ -6191,7 +6191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 51749491}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
 --- !u!224 &1208716627 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 22400008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d,
@@ -6331,7 +6331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 1254891053}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
 --- !u!1 &1254891053
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,7 +6503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7cc26bbb894047916e02148705567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   LabelTag: 'Welcome '
 --- !u!1 &1275969116
 GameObject:
@@ -6539,7 +6539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81824, y: -97.2}
+  m_AnchoredPosition: {x: 513.81836, y: -97.200195}
   m_SizeDelta: {x: 847.6365, y: 94.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275969118
@@ -7240,7 +7240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d0285d32955441998c2fb9e62fd70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   Panel_ByFile: {fileID: 2104619715}
   Panel_ByPlayer: {fileID: 53370557}
 --- !u!114 &1366332267
@@ -7408,7 +7408,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1389128405
 PrefabInstance:
@@ -7781,7 +7781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -248.70454}
+  m_AnchoredPosition: {x: 616.58203, y: -248.7041}
   m_SizeDelta: {x: 1053.1636, y: 109.318184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402760559
@@ -8152,7 +8152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -326.11365
+      value: -326.11328
       objectReference: {fileID: 0}
     - target: {fileID: 22400008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8234,7 +8234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81824, y: -28.056824}
+  m_AnchoredPosition: {x: 513.81836, y: -28.05664}
   m_SizeDelta: {x: 389.40002, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581146367
@@ -8396,7 +8396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.1}
   m_AnchorMax: {x: 0.75, y: 0.9}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.00012207031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1653117346 stripped
@@ -8789,6 +8789,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752539454}
   m_CullTransparentMesh: 0
+--- !u!1 &1843487867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843487869}
+  - component: {fileID: 1843487868}
+  m_Layer: 0
+  m_Name: NewPlayerScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1843487868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843487867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabcec525251a4e99a98cc1a07c1b41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainMenuPanel: {fileID: 996310685}
+  NewPlayerPanel: {fileID: 2118709914}
+  notfirst: 1
+--- !u!4 &1843487869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843487867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.64927, y: -6.4885793, z: -14.100869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1854735091
 GameObject:
   m_ObjectHideFlags: 0
@@ -8914,7 +8960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -258.48978}
+  m_AnchoredPosition: {x: 616.58203, y: -258.49023}
   m_SizeDelta: {x: 847.6365, y: 108.9432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896018537
@@ -9384,65 +9430,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
---- !u!1 &1953006205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1953006207}
-  - component: {fileID: 1953006206}
-  m_Layer: 0
-  m_Name: PrefManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1953006206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953006205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e7330c6229c7b45bf0d3c153bab667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NewPlayerPanel: {fileID: 2118709914}
-  MainMenuPanel: {fileID: 996310685}
-  actualPlayer:
-    PlayerName: 
-    IdAvatar: 0
-  actualPlayerSettings:
-    playerID:
-      PlayerName: New Player
-      IdAvatar: 0
-    healthyEye: 0
-    difficultyStart: 2
-  allAvatars:
-  - {fileID: 21300000, guid: d6af445fc685a9d42b3a15511627a69f, type: 3}
-  - {fileID: 21300000, guid: 95b8478266fbc894ba199026316e80c1, type: 3}
-  - {fileID: 21300000, guid: 8d2990199d2363944a02df0dd15d1b2d, type: 3}
-  PolicyDifficultyBounds: 0
---- !u!4 &1953006207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953006205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958320744
 GameObject:
   m_ObjectHideFlags: 0
@@ -9495,7 +9482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926bdd9f02a73934fb85cba50c7e48ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
 --- !u!114 &1958320747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9791,7 +9777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 1127197962}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   Tag: 'EyePatch start: '
 --- !u!1001 &1981840148
 PrefabInstance:
@@ -9951,7 +9937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItsLabel: {fileID: 808672853}
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
 --- !u!1 &2034562709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10079,7 +10065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.1}
   m_AnchorMax: {x: 0.8, y: 0.9}
-  m_AnchoredPosition: {x: 0, y: 21.475037}
+  m_AnchoredPosition: {x: 0, y: 21.47461}
   m_SizeDelta: {x: 0, y: 42.950012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104619717
@@ -10206,7 +10192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7cc26bbb894047916e02148705567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   LabelTag: 'Player Settings for '
 --- !u!114 &2105211696
 MonoBehaviour:
@@ -10526,6 +10512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad47a175913d2b24da6f157f38b2faec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefManager: {fileID: 1953006205}
+  PrefManager: {fileID: 0}
   PlayerAvatar: {fileID: 1936429238}
   PlayerName: {fileID: 173124514}

@@ -25,6 +25,7 @@ public class SessionManager : MonoBehaviour
         levelName = SceneManager.GetActiveScene().name;
         switch (levelName)
         {
+
             case "Level 1":
                 {
                     levelNumber = 1;

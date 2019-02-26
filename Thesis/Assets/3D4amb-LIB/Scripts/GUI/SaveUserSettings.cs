@@ -24,6 +24,15 @@ public class SaveUserSettings : MonoBehaviour
     /// </summary>
     public GameObject PrefManager;
 
+    void Awake()
+    {
+        if (PrefManager == null)
+        {
+            PrefManager = GameObject.Find("PrefManager");
+        }
+    }
+
+
     /// <summary>
     /// Read the data from the Gamebject and save the
     /// Player settings in the PrefManager PlayerPrefs

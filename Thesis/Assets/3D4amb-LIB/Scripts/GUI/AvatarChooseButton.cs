@@ -21,6 +21,14 @@ public class AvatarChooseButton : MonoBehaviour
 
     private Sprite[] avatars;
 
+    void Awake()
+    {
+        if (PrefManager == null)
+        {
+            PrefManager = GameObject.Find("PrefManager");
+        }
+    }
+
     void Start()
     {
         avatars = PrefManager.GetComponent<PrefManager>().allAvatars;

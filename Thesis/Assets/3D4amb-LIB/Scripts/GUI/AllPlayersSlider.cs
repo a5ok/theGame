@@ -26,6 +26,14 @@ public class AllPlayersSlider : MonoBehaviour
     private int playerIndex;
     private PlayerID[] allPlayers;
 
+    void Awake()
+    {
+        if (PrefManager == null)
+        {
+            PrefManager = GameObject.Find("PrefManager");
+        }
+    }
+
     void OnEnable ()
     {
         allPlayers = PrefManager.GetComponent<PrefManager>().LoadAllPlayers();
