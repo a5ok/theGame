@@ -1240,7 +1240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 1904515920}
-  enemyGrunt: {fileID: 0}
 --- !u!70 &117177766
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10974,7 +10973,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9308dc926d50440d7a5a3290d8afa88c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.6
   m_Pitch: 1
@@ -11060,6 +11059,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1068672203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068672199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5639aad66da2249bd94e30e1d890e681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 8300000, guid: 9308dc926d50440d7a5a3290d8afa88c, type: 3}
+  endLevel: {fileID: 8300000, guid: 258da293e0cc84e7889f39236b4c8263, type: 3}
+  gameOver: {fileID: 8300000, guid: 2d3c4ed7e8bb0487c800cabd5bb3ebf7, type: 3}
 --- !u!1 &1077522506
 GameObject:
   m_ObjectHideFlags: 0

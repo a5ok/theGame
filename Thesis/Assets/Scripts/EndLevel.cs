@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
-    static public bool hasFinished;
+    public static bool hasFinished;
     public GameObject endTextSx;
     public GameObject endTextDx;
     public GameObject textBackGroundSx;

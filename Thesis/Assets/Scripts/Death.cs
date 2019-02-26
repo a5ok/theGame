@@ -110,6 +110,8 @@ public class Death : MonoBehaviour
         if (col.gameObject.tag == "ObstacleTag" && PlayerHealth > 1)
         {
             PlayerHealth -= damage;
+            audioSource.clip = hit;
+            audioSource.Play();
             StartCoroutine("GetInvulnerable");
             if (PlayerHealth == 2)
             {

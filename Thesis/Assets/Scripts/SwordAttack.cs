@@ -6,15 +6,11 @@ public class SwordAttack : MonoBehaviour
 {
     private PlayerController player;
     public ParticleSystem particles;
-    private AudioSource audioSource;
-    public AudioClip enemyGrunt;
 
     void Awake() 
     {
         player = GetComponentInParent<PlayerController>();
-        audioSource = GetComponent<AudioSource>();
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,16 +18,10 @@ public class SwordAttack : MonoBehaviour
         {
             ParticleSystem ps = Instantiate(particles, transform.position, Quaternion.identity);
             ps.Play();
-
-            audioSource.PlayOneShot(enemyGrunt);
             collision.collider.GetComponent<BoxCollider2D>().enabled = false;
             collision.collider.GetComponent<SpriteRenderer>().enabled = false;
             Destroy(collision.collider.gameObject, 4f);
             GameObject.Find("SessionManager").GetComponent<SessionManager>().AddScore(10);
-
-
         }
-        
     }
-
 }
