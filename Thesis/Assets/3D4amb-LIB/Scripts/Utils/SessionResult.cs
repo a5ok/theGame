@@ -17,6 +17,15 @@ namespace Assets._3D4amb_LIB
         /// </summary>
         public PlayerID Player;
         /// <summary>
+        /// Date when the session started
+        /// </summary>
+        public string Date;
+        /// <summary>
+        /// This is the DateTime format used
+        /// to save the session
+        /// </summary>
+        public string DateFormat = "yy/MM/dd h:mm:ss tt";
+        /// <summary>
         /// Difficulty at the start of the session
         /// </summary>
         public GameDifficulty DifficultyStart;
@@ -29,9 +38,6 @@ namespace Assets._3D4amb_LIB
         /// </summary>
         public /*S*/ int Score;
 
-        // Level number
-        public int Level;
-
         /// <summary>
         /// Ctor of the session results with all the parameters
         /// </summary>
@@ -42,9 +48,19 @@ namespace Assets._3D4amb_LIB
         public SessionResult(PlayerID player, GameDifficulty start, GameDifficulty end, int score)
         {
             this.Player = player;
+            this.Date = DateTime.Now.ToString(DateFormat);
             this.DifficultyStart = start;
             this.DifficultyEnd = end;
             this.Score = score;
+        }
+
+        /// <summary>
+        /// Get the DateTime object parsing the string saved
+        /// </summary>
+        /// <returns>The DateTime object of the Date string saved in the session</returns>
+        public DateTime GetDate()
+        {
+            return DateTime.ParseExact(Date, DateFormat, CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -52,12 +68,12 @@ namespace Assets._3D4amb_LIB
         /// </summary>
         /// <param name="player"><see cref="Player"/></param>
         /// <param name="start"><see cref="DifficultyStart"/></param>
-        public SessionResult(PlayerID player, GameDifficulty start, int level)
+        public SessionResult(PlayerID player, GameDifficulty start)
         {
             this.Player = player;
+            this.Date = DateTime.Now.ToString(DateFormat);
             this.DifficultyStart = start;
             this.Score = 0;
-            this.Level = level;
         }
 
         /// <summary>
