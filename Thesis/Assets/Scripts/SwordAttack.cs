@@ -5,7 +5,6 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     private PlayerController player;
-    private Collider2D swordAttack;
     public ParticleSystem particles;
     private AudioSource audioSource;
     public AudioClip enemyGrunt;
@@ -13,10 +12,9 @@ public class SwordAttack : MonoBehaviour
     void Awake() 
     {
         player = GetComponentInParent<PlayerController>();
-        swordAttack = GetComponent<Collider2D>();
         audioSource = GetComponent<AudioSource>();
-
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
