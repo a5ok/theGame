@@ -701,7 +701,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GAME PAUSED
 
-    Press ? to resume
+    Press D to resume
 
     Press A to go to main menu'
 --- !u!222 &48618172
@@ -13594,7 +13594,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GAME PAUSED
 
-    Press ? to resume
+    Press D to resume
 
     Press A to go to main menu'
 --- !u!222 &1561588068
@@ -17492,7 +17492,6 @@ MonoBehaviour:
   - {fileID: 1890046784}
   - {fileID: 498674348}
   hit: {fileID: 8300000, guid: c470e5bf6447a4cca96e15f111c059d0, type: 3}
-  gameOver: {fileID: 8300000, guid: 2d3c4ed7e8bb0487c800cabd5bb3ebf7, type: 3}
   potion: {fileID: 8300000, guid: 3b46628a66b4b4330940070745ab7747, type: 3}
 --- !u!95 &1996596210
 Animator:

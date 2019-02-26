@@ -23,10 +23,15 @@ public class PlayerController : MonoBehaviour {
     private BoxCollider2D myCollider;
     public GameObject playerSword;
     private Animator myAnimator;
-    
 
-	// Use this for initialization
-	void Start () {
+
+    private void Awake()
+    {
+        Death.isDead = false;
+    }
+
+    // Use this for initialization
+    void Start () {
 
         myCollider = GetComponent<BoxCollider2D>();
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -34,7 +39,6 @@ public class PlayerController : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         isAttacking = false;
         playerIsFellDown = false;
-        Death.isDead = false;
     }
 	
 	// Update is called once per frame
@@ -78,7 +82,7 @@ public class PlayerController : MonoBehaviour {
         //Player dies when loses all lives
         if (Death.isDead)
         {
-           myRigidbody.velocity = new Vector2(0, 0);
+           myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
 
             if (Input.GetButtonDown("Fire1"))
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);

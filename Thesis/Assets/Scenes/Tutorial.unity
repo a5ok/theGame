@@ -4589,7 +4589,6 @@ MonoBehaviour:
   - {fileID: 565983910}
   - {fileID: 1734721425}
   hit: {fileID: 8300000, guid: c470e5bf6447a4cca96e15f111c059d0, type: 3}
-  gameOver: {fileID: 8300000, guid: 2d3c4ed7e8bb0487c800cabd5bb3ebf7, type: 3}
   potion: {fileID: 8300000, guid: 3b46628a66b4b4330940070745ab7747, type: 3}
 --- !u!82 &815875006
 AudioSource:
@@ -7462,7 +7461,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GAME PAUSED
 
-    Press ? to resume
+    Press D to resume
 
     Press A to go to main menu'
 --- !u!222 &1358907531
@@ -11592,7 +11591,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GAME PAUSED
 
-    Press ? to resume
+    Press D to resume
 
     Press A to go to main menu'
 --- !u!222 &2074296971

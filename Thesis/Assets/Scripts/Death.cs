@@ -18,7 +18,6 @@ public class Death : MonoBehaviour
     public GameObject[] greyHearts = new GameObject[3];
     private AudioSource audioSource;
     public AudioClip hit;
-    public AudioClip gameOver;
     public AudioClip potion;
 
 
@@ -168,12 +167,6 @@ public class Death : MonoBehaviour
         foreach (GameObject gos in greyHearts)
         {
             gos.SetActive(true);
-        }
-
-        if (!isDead)
-        {
-            audioSource.clip = gameOver;
-            audioSource.Play();
         }
 
         isDead = true;

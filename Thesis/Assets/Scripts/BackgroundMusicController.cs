@@ -17,23 +17,23 @@ public class BackgroundMusicController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = background;
         audioSource.Play();
-        played = true;
+        played = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(EndLevel.hasFinished && played)
+        if(EndLevel.hasFinished && !played)
         {
-            played = false;
+            played = true;
             audioSource.clip = endLevel;
             audioSource.loop = false;
             audioSource.Play();
         }
 
-        if(Death.isDead && played)
+        if(Death.isDead && !played)
         {
-            played = false;
+            played = true;
             audioSource.clip = gameOver;
             audioSource.loop = false;
             audioSource.Play();
