@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This object handles the session. Create a new session when the game starts,
@@ -13,13 +14,40 @@ public class SessionManager : MonoBehaviour
     private PrefManager prefManager;
     private PlayerID actualPlayer;
     private PenaltyManager PM;
+    private string levelName;
+    private int levelNumber;
 
 	void Start ()
     {
         prefManager = GameObject.Find("PrefManager").GetComponent<PrefManager>();
         PM          = GameObject.Find("PenaltyManager").GetComponent<PenaltyManager>();
         actualPlayer = prefManager.actualPlayer;
-        sessionResult = new SessionResult(actualPlayer, PM.Difficulty);
+        levelName = SceneManager.GetActiveScene().name;
+        switch (levelName)
+        {
+            case "Level 1":
+                {
+                    levelNumber = 1;
+                    break;
+                }
+            case "Level 2":
+                {
+                    levelNumber = 2;
+                    break;
+                }
+            case "Level 3":
+                {
+                    levelNumber = 3;
+                    break;
+                }
+            case "Level 4":
+                {
+                    levelNumber = 4;
+                    break;
+                }
+        }
+
+        sessionResult = new SessionResult(actualPlayer, PM.Difficulty, levelNumber);
 	}
 
     /// <summary>
