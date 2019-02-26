@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class BlinkTitleText : MonoBehaviour
+public class BlinkLevelText : MonoBehaviour
 {
 
     Text flashingText;
@@ -19,7 +19,7 @@ public class BlinkTitleText : MonoBehaviour
     {
         while (true)
         {
-            flashingText.text = "Touch the screen to begin";
+            flashingText.text = "Press A to start";
             yield return new WaitForSeconds(.5f);
             flashingText.text = "";
             yield return new WaitForSeconds(.5f);
