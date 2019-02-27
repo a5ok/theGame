@@ -14,12 +14,13 @@ public class LoadSceneOnClick : MonoBehaviour
     /// <param name="sceneName">An acceptable name for a Scene</param>
     public void LoadByName(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(DelaySceneLoad(sceneName));
     }
 
-
-
-   
-
+    IEnumerator DelaySceneLoad(string level)
+    {
+        yield return new WaitForSeconds(.3f);
+        SceneManager.LoadScene(level);
+    }
 
 }

@@ -11,6 +11,7 @@ TagManager:
   - PotionTag
   - ObstacleTag
   - SwordTag
+  - MusicTag
   layers:
   - Default
   - TransparentFX
