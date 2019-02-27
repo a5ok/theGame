@@ -95,18 +95,21 @@ public class PlayerController : MonoBehaviour {
         if (EndLevel.hasFinished)
         {
             myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
+
             if (Input.GetButtonDown("Fire1"))
             {
+                if (SceneManager.GetActiveScene().name != "Tutorial")
+                    GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 EndLevel.hasFinished = false;
-                GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
+                
             }
             else if (Input.GetButtonDown("Jump"))
             {
+                if (SceneManager.GetActiveScene().name != "Tutorial")
+                    GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
                 SceneManager.LoadScene("MainMenu");
                 EndLevel.hasFinished = false;
-                GameObject.Find("SessionManager").GetComponent<SessionManager>().SaveSession();
-
             }
         }
 

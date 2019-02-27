@@ -57,6 +57,7 @@ public class Graph : MonoBehaviour
     /// the array of DataPoints
     /// </summary>
     public SessionResult[] sres;
+    
 
     private PrefManager prefManager;
     private PlayerID actualPlayer;
@@ -67,13 +68,31 @@ public class Graph : MonoBehaviour
     private SessionResult[] sresLevel3;
     private SessionResult[] sresLevel4;
     private SessionResult[] sresMaxByLevel;
+    private SessionResult[] sresStock;
+    private SessionResult[] sresReal;
 
     void Start()
     {
         prefManager = GameObject.Find("PrefManager").GetComponent<PrefManager>();
         actualPlayer = prefManager.actualPlayer;
+
         sres = prefManager.LoadSResForActualPlayer();
 
+        sresStock = new SessionResult[4];
+        sresStock[0] = new SessionResult(actualPlayer, GameDifficulty.EASY, 1);
+        sresStock[1] = new SessionResult(actualPlayer, GameDifficulty.EASY, 2);
+        sresStock[2] = new SessionResult(actualPlayer, GameDifficulty.EASY, 3);
+        sresStock[3] = new SessionResult(actualPlayer, GameDifficulty.EASY, 4);
+
+        if(sres == null)
+            sresReal = sresStock;
+        else
+        {
+            int lenght = sres.Length + 4;
+            sresReal = new SessionResult[lenght];
+            sresStock.CopyTo(sresReal, 0);
+            sres.CopyTo(sresReal, 4);
+        }
 
         sresMaxByLevel = new SessionResult[4];
         colorDict = new Dictionary<GameDifficulty, Color>()
@@ -83,14 +102,12 @@ public class Graph : MonoBehaviour
             {GameDifficulty.HARD, HardColor },
         };
 
-        DivideByLevel(sres);
+        DivideByLevel(sresReal);
 
 
 
-        if (sres!=null)
-        {
-            SpawnData();
-        }
+            
+        
 
 
     }
@@ -117,13 +134,16 @@ public class Graph : MonoBehaviour
 
     private float GetScoreNorm(float score, float MaxScore)
     {
-        return (maxScaleY * score )/ MaxScore;
+        if (MaxScore == 0)
+            return 0;
+        else
+            return (maxScaleY * score )/ MaxScore;
     }
 
     private void SpawnData()
     {
-        SessionResult Max = sres[0];
-        foreach(SessionResult s in sres)
+        SessionResult Max = sresReal[0];
+        foreach(SessionResult s in sresReal)
         {
             if(s.CompareTo(Max)>0)
             {
@@ -242,7 +262,7 @@ public class Graph : MonoBehaviour
     }
 
     private void GetMaxVector()
-    {   
+    {
         int max1 = sresLevel1[0].Score;
         int max2 = sresLevel2[0].Score;
         int max3 = sresLevel3[0].Score;
@@ -295,6 +315,7 @@ public class Graph : MonoBehaviour
         sresMaxByLevel[2] = sresMax3;
         sresMaxByLevel[3] = sresMax4;
 
+        SpawnData();
 
     }
 }
