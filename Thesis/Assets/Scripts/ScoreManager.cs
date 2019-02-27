@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int score;
 
+    private int score;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,6 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         score = GameObject.Find("SessionManager").GetComponent<SessionManager>().GetScore();
-        this.GetComponent<TextMesh>().text = "Score: " + score.ToString();
+        this.GetComponent<Text>().text = "Score: " + score;
     }
 }
