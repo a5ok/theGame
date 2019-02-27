@@ -24,6 +24,15 @@ public class AddUser : MonoBehaviour
     /// </summary>
     public GameObject AvatarButton;
 
+    void Awake()
+    {
+        if (PrefManager == null)
+        {
+            PrefManager = GameObject.Find("PrefManager");
+        }
+    }
+
+
     /// <summary>
     /// Add a player to the PrefManager, reading the name
     /// from the inputfield and the avatar from the avatarbutton

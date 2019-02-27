@@ -11,7 +11,7 @@ public class PlayerSettingsOnPolitic : MonoBehaviour
     /// <summary>
     /// <see cref="PrefManager"/>
     /// </summary>
-    public GameObject PrefManager;
+    public PrefManager PrefManager;
     /// <summary>
     /// The Panel that must be openend if the <see cref="GamePolicy.DifficultyBounds.FROM_FILE"/>
     /// </summary>
@@ -25,6 +25,7 @@ public class PlayerSettingsOnPolitic : MonoBehaviour
 
 	void Start ()
     {
+        PrefManager = GameObject.Find("PrefManager").GetComponent<PrefManager>();
         PolicyDifficultyBounds = PrefManager.GetComponent<PrefManager>().PolicyDifficultyBounds;
 	}
 

@@ -10,6 +10,13 @@ using UnityEngine.UI;
 /// </summary>
 public class HealthyEyeSlider : SliderScript
 {
+    PrefManager pm;
+
+    private void Awake()
+    {
+        pm = GameObject.Find("PrefManager").GetComponent<PrefManager>();
+    }
+
     protected override void SetTag()
     {
         SliderTag = "Healthy eye: ";
@@ -17,7 +24,7 @@ public class HealthyEyeSlider : SliderScript
 
     protected override void InitSliderValue()
     {
-        PlayerSettings ps = PrefManager.GetComponent<PrefManager>().LoadPlayerSettings();
+        PlayerSettings ps = pm.GetComponent<PrefManager>().LoadPlayerSettings();
         gameObject.GetComponent<Slider>().value = (int)ps.healthyEye;
     }
 

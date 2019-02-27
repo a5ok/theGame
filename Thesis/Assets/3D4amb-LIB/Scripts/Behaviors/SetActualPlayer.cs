@@ -8,14 +8,19 @@ using UnityEngine;
 /// </summary>
 public class SetActualPlayer : MonoBehaviour
 {
-    public GameObject PrefManager;
+    PrefManager pm;
+
+    private void Awake()
+    {
+        pm = GameObject.Find("PrefManager").GetComponent<PrefManager>();
+    }
 
     /// <summary>
     /// Reload the PlayerSettings form the PrefManager
     /// </summary>
     public void ReloadPlayerSettings()
     {
-        PrefManager prefManager = PrefManager.GetComponent<PrefManager>();
-        prefManager.actualPlayerSettings = prefManager.LoadPlayerSettings();
+
+        pm.actualPlayerSettings = pm.LoadPlayerSettings();
     }
 }

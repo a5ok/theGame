@@ -51,10 +51,7 @@ public class Graph : MonoBehaviour
     /// Color of the Hard Difficulty DataPoint bars
     /// </summary>
     public Color HardColor;
-    /// <summary>
-    /// DateFormat used to print the Date
-    /// </summary
-    public string DateFormat = "dd/MM/yy";
+  
     /// <summary>
     /// The array of SessionResults that will create
     /// the array of DataPoints
@@ -65,21 +62,37 @@ public class Graph : MonoBehaviour
     private PlayerID actualPlayer;
     private Dictionary<GameDifficulty, Color> colorDict;
 
+    private SessionResult[] sresLevel1;
+    private SessionResult[] sresLevel2;
+    private SessionResult[] sresLevel3;
+    private SessionResult[] sresLevel4;
+    private SessionResult[] sresMaxByLevel;
+
     void Start()
     {
         prefManager = GameObject.Find("PrefManager").GetComponent<PrefManager>();
         actualPlayer = prefManager.actualPlayer;
         sres = prefManager.LoadSResForActualPlayer();
+
+
+        sresMaxByLevel = new SessionResult[4];
         colorDict = new Dictionary<GameDifficulty, Color>()
         {
             {GameDifficulty.EASY, EasyColor },
             {GameDifficulty.MEDIUM, MediumColor },
             {GameDifficulty.HARD, HardColor },
         };
-        if(sres!=null)
+
+        DivideByLevel(sres);
+
+
+
+        if (sres!=null)
         {
             SpawnData();
         }
+
+
     }
 
     private void AddRandomSessions()
@@ -120,9 +133,9 @@ public class Graph : MonoBehaviour
         float maxScore = Max.Score;
         //Debug.Log("Max score = " + maxScore);
 
-        for (int i = 0; i < sres.Length; i++)
+        for (int i = 0; i < sresMaxByLevel.Length; i++)
         {
-            DataPoint dp = new DataPoint(i + (i * padding), GetScoreNorm(sres[i].Score, maxScore), sres[i].DifficultyEnd);
+            DataPoint dp = new DataPoint(i + (i * padding), GetScoreNorm(sresMaxByLevel[i].Score, maxScore), sresMaxByLevel[i].DifficultyEnd);
             GameObject dpgo = GameObject.Instantiate(DataPointPrefab, new Vector3(transform.position.x + dp.x* barWidth,
                                                                            transform.position.y + dp.y / 2, 0), Quaternion.identity);
             dpgo.transform.SetParent(transform);
@@ -134,8 +147,8 @@ public class Graph : MonoBehaviour
 
             //texts => li prende in ordine gerarchico
             TextMesh[] texts = dpgo.GetComponentsInChildren<TextMesh>();
-            texts[0].text = sres[i].Score.ToString();
-            texts[1].text = sres[i].GetDate().ToString(DateFormat);
+            texts[0].text = sresMaxByLevel[i].Score.ToString();
+            texts[1].text = "Level " + (i + 1);
             Transform scoreText = dpgo.transform.GetChild(1);
 
             scoreText.gameObject.transform.position = new Vector3(scoreText.transform.position.x,
@@ -146,5 +159,142 @@ public class Graph : MonoBehaviour
                                                                     dateText.transform.position.y - dp.y / 2 +  0.5f - distanceDateTextToBar,
                                                                     0);
         }
+    }
+
+    private void DivideByLevel(SessionResult[] sr)
+    {
+        foreach(SessionResult session in sr)
+        {
+            switch(session.Level)
+            {
+                case 1:
+                    {
+                        if(sresLevel1 == null)
+                        {
+                            sresLevel1 = new SessionResult[1];
+                            sresLevel1[0] = session;
+                        }
+                        else
+                        {
+                            SessionResult[] arrayT = new SessionResult[sresLevel1.Length + 1];
+                            sresLevel1.CopyTo(arrayT, 0);
+                            arrayT[arrayT.Length - 1] = session;
+                            sresLevel1 = new SessionResult[arrayT.Length];
+                            arrayT.CopyTo(sresLevel1, 0);
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (sresLevel2 == null)
+                        {
+                            sresLevel2 = new SessionResult[1];
+                            sresLevel2[0] = session;
+                        }
+                        else
+                        {
+                            SessionResult[] arrayT = new SessionResult[sresLevel2.Length + 1];
+                            sresLevel2.CopyTo(arrayT, 0);
+                            arrayT[arrayT.Length - 1] = session;
+                            sresLevel2 = new SessionResult[arrayT.Length];
+                            arrayT.CopyTo(sresLevel2, 0);
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        if (sresLevel3 == null)
+                        {
+                            sresLevel3 = new SessionResult[1];
+                            sresLevel3[0] = session;
+                        }
+                        else
+                        {
+                            SessionResult[] arrayT = new SessionResult[sresLevel3.Length + 1];
+                            sresLevel3.CopyTo(arrayT, 0);
+                            arrayT[arrayT.Length - 1] = session;
+                            sresLevel3 = new SessionResult[arrayT.Length];
+                            arrayT.CopyTo(sresLevel3, 0);
+                        }
+                        break;
+                    }
+                case 4:
+                    {
+                        if (sresLevel4 == null)
+                        {
+                            sresLevel4 = new SessionResult[1];
+                            sresLevel4[0] = session;
+                        }
+                        else
+                        {
+                            SessionResult[] arrayT = new SessionResult[sresLevel4.Length + 1];
+                            sresLevel4.CopyTo(arrayT, 0);
+                            arrayT[arrayT.Length - 1] = session;
+                            sresLevel4 = new SessionResult[arrayT.Length];
+                            arrayT.CopyTo(sresLevel4, 0);
+                        }
+                        break;
+                    }
+            }
+        }
+
+        GetMaxVector();
+    }
+
+    private void GetMaxVector()
+    {   
+        int max1 = sresLevel1[0].Score;
+        int max2 = sresLevel2[0].Score;
+        int max3 = sresLevel3[0].Score;
+        int max4 = sresLevel4[0].Score;
+
+        SessionResult sresMax1 = sresLevel1[0];
+        SessionResult sresMax2 = sresLevel2[0];
+        SessionResult sresMax3 = sresLevel3[0];
+        SessionResult sresMax4 = sresLevel4[0];
+
+
+        foreach (SessionResult sr in sresLevel1)
+        {
+            if (sr.Score > max1)
+            {
+                max1 = sr.Score;
+                sresMax1 = sr;
+            }
+        }
+
+        foreach (SessionResult sr in sresLevel2)
+        {
+            if (sr.Score > max2)
+            {
+                max2 = sr.Score;
+                sresMax2 = sr;
+            }
+        }
+
+        foreach (SessionResult sr in sresLevel3)
+        {
+            if (sr.Score > max3)
+            {
+                max3 = sr.Score;
+                sresMax3 = sr;
+            }
+        }
+
+        foreach (SessionResult sr in sresLevel4)
+        {
+            if (sr.Score > max4)
+            {
+                max4 = sr.Score;
+                sresMax4 = sr;
+            }
+        }
+
+        sresMaxByLevel[0] = sresMax1;
+        sresMaxByLevel[1] = sresMax2;
+        sresMaxByLevel[2] = sresMax3;
+        sresMaxByLevel[3] = sresMax4;
+
+
     }
 }

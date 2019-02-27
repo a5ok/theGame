@@ -9,6 +9,13 @@ using UnityEngine.UI;
 /// </summary>
 public class DifficultySlider : SliderScript   
 {
+    PrefManager pm;
+
+    private void Awake()
+    {
+        pm = GameObject.Find("PrefManager").GetComponent<PrefManager>();
+    }
+
     protected override void SetTag()
     {
         SliderTag = "Difficulty: ";
@@ -16,7 +23,7 @@ public class DifficultySlider : SliderScript
 
     protected override void InitSliderValue()
     {
-        gameObject.GetComponent<Slider>().value = (int)PrefManager.GetComponent<PrefManager>().actualPlayerSettings.difficultyStart;
+        gameObject.GetComponent<Slider>().value = (int)pm.GetComponent<PrefManager>().actualPlayerSettings.difficultyStart;
     }
 
 	public override void UpdateSlider()

@@ -512,7 +512,6 @@ MonoBehaviour:
   EasyColor: {r: 0, g: 0.10015228, b: 0.5808823, a: 0}
   MediumColor: {r: 0.07298875, g: 0.19886495, b: 0.66176474, a: 0}
   HardColor: {r: 0.30103803, g: 0.32058218, b: 0.7058823, a: 0}
-  DateFormat: dd/MM/yy
   sres: []
 --- !u!4 &1916127532
 Transform:
@@ -522,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916127530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -807, y: -416, z: 0}
+  m_LocalPosition: {x: -690, y: -416, z: 0}
   m_LocalScale: {x: 1068.2191, y: 1186.9102, z: 100}
   m_Children: []
   m_Father: {fileID: 2080038028}
