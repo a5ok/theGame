@@ -148,7 +148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -736.09973}
+  m_AnchoredPosition: {x: 576, y: -776.4049}
   m_SizeDelta: {x: 847.636, y: 108.9432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4723325
@@ -3505,7 +3505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.58203, y: -143.0957}
+  m_AnchoredPosition: {x: 576, y: -139.66666}
   m_SizeDelta: {x: 1053.1636, y: 139.33331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675099976
@@ -10249,8 +10249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 616.5818, y: -447.19507}
-  m_SizeDelta: {x: 1053.1636, y: 455.15152}
+  m_AnchoredPosition: {x: 576, y: -465.6333}
+  m_SizeDelta: {x: 1053.2, y: 512.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034562711
 MonoBehaviour:
@@ -10274,7 +10274,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: da94f56bf9650452db44f487a0d303ec, type: 3}
-    m_FontSize: 50
+    m_FontSize: 47
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -10285,12 +10285,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum
+  m_Text: "Welcome to Rueneye Go! In this great adventure you will follow Runeo, a
+    brave warrior from the modern city of Y\u01CEnj\xECng, in his journey against
+    forces of evil. Runeo has to leave his city, to find and defeat wicked  monsters
+    born from Ruoshi, a terrible demon whose ultimate aim is to blind every children
+    in the world. Help Runeo clearing beautiful landscapes from Ruoshi\u2019s minion:
+    press A to jump and avoid spiky obstacles, press B to swing your sword and kill
+    the demons, find potions to heal Runeo and lead him to the beginning of the end!"
 --- !u!222 &2034562712
 CanvasRenderer:
   m_ObjectHideFlags: 0
