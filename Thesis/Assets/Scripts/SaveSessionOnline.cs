@@ -23,8 +23,6 @@ public class SaveSessionOnline : MonoBehaviour
         score = GetScore();
         eye = GetEye();
         difficulty = GetDifficulty();
-        //Debug.Log(accountName + level + score + eye + difficulty);
-
         results = " " + level + " - " + score + " - " + eye + " - " + difficulty;
         url = "https://se4med.unibg.it/se4medservice/?action=storeresults&useremail=" + Login.email + "&password=" + Login.passwordEncoded + "&username=" + accountName + "&idapp=Runeye&result=" + results;
         Get(url);
