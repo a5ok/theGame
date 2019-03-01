@@ -24,6 +24,9 @@ public class SaveUserSettings : MonoBehaviour
     /// </summary>
     public GameObject PrefManager;
 
+    public static GameDifficulty difficulty;
+    public static Eye eye;
+
     void Awake()
     {
         if (PrefManager == null)
@@ -43,5 +46,7 @@ public class SaveUserSettings : MonoBehaviour
         Eye setEye              = (Eye)eyeSlider.GetComponent<Slider>().value;
         PrefManager.GetComponent<PrefManager>().SavePlayerSettings(setDiff, setEye);
         PrefManager.GetComponent<PrefManager>().LoadPlayerSettings();   //so it also loads the player settings just saved
+        eye = setEye;
+        difficulty = setDiff;
     }
 }

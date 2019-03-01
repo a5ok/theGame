@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Login : MonoBehaviour
 {
     public GameObject InputFieldEmail;
     public GameObject InputFieldPassword;
-    private string passwordEncoded;
+    public static string email;
+    public static string passwordEncoded;
     private string url;
     private static string result;
     private string loginFailed = "Served at: /se4medservice{authenticationPatient=Authentication failed. Wrong credential or no user found.}";
+    public static string[] accounts;
 
     public void LoginAttempt()
     {
-        string email = InputFieldEmail.GetComponent<InputField>().text;
+        email = InputFieldEmail.GetComponent<InputField>().text;
         string password = InputFieldPassword.GetComponent<InputField>().text;
         passwordEncoded = HashFunction.Sha256(password);
         url = "https://se4med.unibg.it/se4medservice/?action=authenticatepatient&useremail=" + email + "&password=" + passwordEncoded + "&idapp=Runeye";
@@ -41,7 +44,21 @@ public class Login : MonoBehaviour
     {
         if (result.Equals(loginFailed))
             Debug.Log("NOPE");
+        else
+        {
+            Debug.Log(result);
+            GetAccounts(result);
+        }
         
+    }
+
+    public void GetAccounts(string result)
+    {
+        int lenght = result.Length;
+        string accountsString = result.Substring(48, lenght - 49);
+        Debug.Log(accountsString);
+        accounts = accountsString.Split(',');
+        SceneManager.LoadScene("AccountSelection");
     }
 
 

@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 72dc7d0b5dd68445ebd9ec64846e9f97
   - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 63ca1d6c026994f2ca0e0ad86484318a
+  - enabled: 1
+    path: Assets/Scenes/AccountSelection.unity
+    guid: 24fb394d5aa6249f892e69908f0ec2d8
+  - enabled: 1
     path: Assets/3D4amb-LIB/Scenes/MainMenu.unity
     guid: b7e1de01b0b535345b439b3097a0ffa7
   - enabled: 1

@@ -23299,6 +23299,7 @@ GameObject:
   - component: {fileID: 1853328177}
   - component: {fileID: 1853328176}
   - component: {fileID: 1853328175}
+  - component: {fileID: 1853328178}
   m_Layer: 10
   m_Name: 'EndLevelTrigger '
   m_TagString: EndLevel
@@ -23364,6 +23365,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853328178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853328174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4742d395c36048abbdd943936eace3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1855826197
 GameObject:
   m_ObjectHideFlags: 0

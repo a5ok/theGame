@@ -31,6 +31,7 @@ public class EndLevel : MonoBehaviour
             endTextDx.SetActive(true);
             textBackGroundSx.SetActive(true);
             textBackGroundDx.SetActive(true);
+            GetComponent<SaveSessionOnline>().Save();
         }
 
     }

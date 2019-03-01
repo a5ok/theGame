@@ -100,4 +100,9 @@ public class SessionManager : MonoBehaviour
         sessionResult.DifficultyEnd = PM.Difficulty;
         prefManager.AddSResForActualPlayer(sessionResult);
     }
+
+    public int GetLevel()
+    {
+        return sessionResult.Level;
+    }
 }
