@@ -2390,6 +2390,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera Right
       objectReference: {fileID: 0}
+    - target: {fileID: 20089322680379626, guid: 987c4a6af0419094882b0bd44e63ad89,
+        type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20089322680379626, guid: 987c4a6af0419094882b0bd44e63ad89,
+        type: 3}
+      propertyPath: orthographic size
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4456397807114202, guid: 987c4a6af0419094882b0bd44e63ad89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2433,16 +2443,6 @@ PrefabInstance:
     - target: {fileID: 4456397807114202, guid: 987c4a6af0419094882b0bd44e63ad89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20089322680379626, guid: 987c4a6af0419094882b0bd44e63ad89,
-        type: 3}
-      propertyPath: m_Depth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20089322680379626, guid: 987c4a6af0419094882b0bd44e63ad89,
-        type: 3}
-      propertyPath: orthographic size
-      value: 6.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987c4a6af0419094882b0bd44e63ad89, type: 3}
@@ -9979,6 +9979,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera Left
       objectReference: {fileID: 0}
+    - target: {fileID: 20626061842078184, guid: 35d98ad1ac1fb7a43aa7b750967684cd,
+        type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20626061842078184, guid: 35d98ad1ac1fb7a43aa7b750967684cd,
+        type: 3}
+      propertyPath: orthographic size
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4965422057775960, guid: 35d98ad1ac1fb7a43aa7b750967684cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10022,16 +10032,6 @@ PrefabInstance:
     - target: {fileID: 4965422057775960, guid: 35d98ad1ac1fb7a43aa7b750967684cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20626061842078184, guid: 35d98ad1ac1fb7a43aa7b750967684cd,
-        type: 3}
-      propertyPath: m_Depth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20626061842078184, guid: 35d98ad1ac1fb7a43aa7b750967684cd,
-        type: 3}
-      propertyPath: orthographic size
-      value: 6.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d98ad1ac1fb7a43aa7b750967684cd, type: 3}

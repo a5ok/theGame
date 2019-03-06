@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    public IEnumerator Attack() // aggiunta variabile per distinzione attacco/morte
+    public IEnumerator Attack() 
     {
         playerSword.SetActive(true);
         myAnimator.SetTrigger("Attack");

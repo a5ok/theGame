@@ -10,6 +10,8 @@ public class Login : MonoBehaviour
 {
     public GameObject InputFieldEmail;
     public GameObject InputFieldPassword;
+    public GameObject loginText;
+    public GameObject failText;
     public static string email;
     public static string passwordEncoded;
     private string url;
@@ -43,7 +45,7 @@ public class Login : MonoBehaviour
     public void CheckInfos(string result)
     {
         if (result.Equals(loginFailed))
-            Debug.Log("NOPE");
+            StartCoroutine(Retry());
         else
         {
             Debug.Log(result);
@@ -59,6 +61,16 @@ public class Login : MonoBehaviour
         Debug.Log(accountsString);
         accounts = accountsString.Split(',');
         SceneManager.LoadScene("AccountSelection");
+    }
+
+    public IEnumerator Retry()
+    {
+        loginText.SetActive(false);
+        failText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        failText.SetActive(false);
+        loginText.SetActive(true);
+
     }
 
 

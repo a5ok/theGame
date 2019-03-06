@@ -2,8 +2,11 @@
 using Assets._3D4amb_LIB.Scripts.Utils;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 /// <summary>
 /// This object let you save the user settings 
@@ -27,6 +30,16 @@ public class SaveUserSettings : MonoBehaviour
     public static GameDifficulty difficulty;
     public static Eye eye;
 
+    private string email;
+    private string password;
+    private string accountName;
+    private string eyeSelected;
+    private string difficultySelected;
+    private string playerSettings;
+    private string url;
+    private string result;
+
+
     void Awake()
     {
         if (PrefManager == null)
@@ -48,5 +61,57 @@ public class SaveUserSettings : MonoBehaviour
         PrefManager.GetComponent<PrefManager>().LoadPlayerSettings();   //so it also loads the player settings just saved
         eye = setEye;
         difficulty = setDiff;
+       
+        StoreSettingsOnline();
+    }
+
+    public void StoreSettingsOnline()
+    {
+        email = Login.email;
+        password = Login.passwordEncoded;
+        accountName = AccountButtons.onlineName;
+        eyeSelected = GetEye().ToString();
+        difficultySelected = GetDifficulty().ToString();
+        PlayerSettingsOnline settings = new PlayerSettingsOnline
+        {
+            difficulty = difficultySelected,
+            eye = eyeSelected
+        };
+        playerSettings = settings.SaveToJson();
+        //Debug.Log(playerSettings);
+        url = "https://se4med.unibg.it/se4medservice/?action=storesettings&useremail=" + email + "&password=" + password + "&username=" + accountName + "&idapp=Runeye&appsettings=" + playerSettings;
+        result = Get(url);
+        //Debug.Log(result);
+    }
+
+    public int GetEye()
+    {
+        if (eye == Eye.LEFT)
+            return 1;
+        else
+            return 0;
+    }
+
+    public int GetDifficulty()
+    {
+        if (difficulty == GameDifficulty.EASY)
+            return 0;
+        else if (difficulty == GameDifficulty.MEDIUM)
+            return 1;
+        else
+            return 2;
+    }
+
+    public string Get(string url)
+    {
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+        request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+
+        using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+        using (Stream stream = response.GetResponseStream())
+        using (StreamReader reader = new StreamReader(stream))
+        {
+            return reader.ReadToEnd();
+        }
     }
 }
