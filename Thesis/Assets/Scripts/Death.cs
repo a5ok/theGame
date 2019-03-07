@@ -175,7 +175,6 @@ public class Death : MonoBehaviour
         deathTextDx.SetActive(true);
         textBackGroundSx.SetActive(true);
         textBackGroundDx.SetActive(true);
-
-
+        
     }
 }
