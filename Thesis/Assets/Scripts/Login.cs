@@ -47,10 +47,9 @@ public class Login : MonoBehaviour
         if (result.Equals(loginFailed))
             StartCoroutine(Retry());
         else
-        {
-            Debug.Log(result);
+            //Debug.Log(result);
             GetAccounts(result);
-        }
+
         
     }
 
