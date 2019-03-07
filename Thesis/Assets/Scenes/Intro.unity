@@ -737,7 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NewPlayerPanel: {fileID: 0}
-  MainMenuPanel: {fileID: 0}
+  MainMenuPanel: {fileID: 6355072223265859981, guid: a968b23b54516624da814b0918382613,
+    type: 3}
   actualPlayer:
     PlayerName: 
     IdAvatar: 0
