@@ -1282,8 +1282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81824, y: -499.1389}
-  m_SizeDelta: {x: 847.6365, y: 77.2}
+  m_AnchoredPosition: {x: 480, y: -499.1389}
+  m_SizeDelta: {x: 780, y: 77.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173124516
 MonoBehaviour:
@@ -2516,8 +2516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81824, y: -835.5097}
-  m_SizeDelta: {x: 847.6365, y: 108.9432}
+  m_AnchoredPosition: {x: 480, y: -835.5097}
+  m_SizeDelta: {x: 780, y: 108.9432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415638736
 MonoBehaviour:
@@ -6209,13 +6209,6 @@ MonoBehaviour:
   difficultySlider: {fileID: 1252661694}
   eyeSlider: {fileID: 1984745216}
   PrefManager: {fileID: 0}
-  email: 
-  password: 
-  accountName: 
-  eyeSelected: 0
-  difficultySelected: 0
-  settings: 
-  url: 
 --- !u!1 &1127197962
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,8 +6809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81836, y: -97.200195}
-  m_SizeDelta: {x: 847.6365, y: 94.4}
+  m_AnchoredPosition: {x: 480, y: -97.2}
+  m_SizeDelta: {x: 780, y: 94.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275969118
 MonoBehaviour:
@@ -9548,8 +9541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81824, y: -302.46942}
-  m_SizeDelta: {x: 847.6365, y: 259.90152}
+  m_AnchoredPosition: {x: 480, y: -302.46942}
+  m_SizeDelta: {x: 780, y: 259.90152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936429240
 MonoBehaviour:
@@ -9740,8 +9733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 513.81824, y: -698.4478}
-  m_SizeDelta: {x: 847.6365, y: 108.9432}
+  m_AnchoredPosition: {x: 480, y: -698.4478}
+  m_SizeDelta: {x: 780, y: 108.9432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958320746
 MonoBehaviour:
@@ -10152,7 +10145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 847.6365
+      value: 780
       objectReference: {fileID: 0}
     - target: {fileID: 22400008, guid: b6a1cf4e3eeaf9a4ca38bf8acb910a6d, type: 3}
       propertyPath: m_SizeDelta.y

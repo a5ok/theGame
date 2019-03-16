@@ -78,10 +78,8 @@ public class SaveUserSettings : MonoBehaviour
             eye = eyeSelected
         };
         playerSettings = settings.SaveToJson();
-        //Debug.Log(playerSettings);
         url = "https://se4med.unibg.it/se4medservice/?action=storesettings&useremail=" + email + "&password=" + password + "&username=" + accountName + "&idapp=Runeye&appsettings=" + playerSettings;
         result = Get(url);
-        //Debug.Log(result);
     }
 
     public int GetEye()
