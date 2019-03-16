@@ -10285,11 +10285,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to Rueneye Go! In this great adventure you will follow Runeo, a
-    brave warrior from the modern city of Y\u01CEnj\xECng, in his journey against
-    forces of evil. Runeo has to leave his city, to find and defeat wicked  monsters
-    born from Ruoshi, a terrible demon whose ultimate aim is to blind every children
-    in the world. Help Runeo clearing beautiful landscapes from Ruoshi\u2019s minion:
+  m_Text: "Welcome to Runeye Go! In this great adventure you will follow Runeo, a
+    brave warrior from the modern city of Yanj\xECng, in his journey against forces
+    of evil. Runeo has to leave his city, to find and defeat wicked monsters born
+    from Ruoshi, a terrible demon whose ultimate aim is to blind every children in
+    the world. Help Runeo clearing beautiful landscapes from Ruoshi\u2019s minion:
     press A to jump and avoid spiky obstacles, press B to swing your sword and kill
     the demons, find potions to heal Runeo and lead him to the beginning of the end!"
 --- !u!222 &2034562712
